@@ -41,11 +41,13 @@ html,
     width: 100%;
     height: 100%;
     background: -webkit-linear-gradient(linear, #000000, #001338, #4b566b);
+    background: -webkit-gradient(linear, center top, center bottom, from(#000000), color-stop(50%, #001338), to(#4b566b));
     background: -moz-linear-gradient(top, #000000, #001338, #4b566b);
 }
 
 .main1 {
     background: -webkit-linear-gradient(linear, #000000, #001338, #4b566b);
+    background: -webkit-gradient(linear, center top, center bottom, from(#000000), color-stop(50%, #001338), to(#4b566b));
     background: -moz-linear-gradient(top, #000000, #001338, #4b566b);
 }
 
