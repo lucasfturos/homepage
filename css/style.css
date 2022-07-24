@@ -93,10 +93,9 @@ footer {
     width: auto;
     height: auto;
     display: inline-block;
-    margin-left: 25px;
-    margin-top: 5px;
     border-width: 0;
-    position: fixed;
+    filter: invert(100%);
+    margin-top: 10px;
 }
 
 .linkedin {
@@ -105,10 +104,10 @@ footer {
     width: auto;
     height: auto;
     display: inline-block;
-    margin-left: 105px;
-    margin-top: 5px;
     border-width: 0;
-    position: fixed;
+    filter: invert(100%);
+    margin-left: 15px;
+    margin-top: 10px;
 }
 
 .instagram {
@@ -117,32 +116,10 @@ footer {
     width: auto;
     height: auto;
     display: inline-block;
-    margin-left: 195px;
-    margin-top: 5px;
     border-width: 0;
-    position: fixed;
-}
-
-/* Texto */
-.githubh6 {
-    margin-top: 45px;
-    margin-left: 20px;
-    display: inline-block;
-    position: fixed;
-}
-
-.linkedinh6 {
-    margin-top: 45px;
-    margin-left: 95px;
-    display: inline-block;
-    position: fixed;
-}
-
-.instagramh6 {
-    margin-top: 45px;
-    margin-left: 180px;
-    display: inline-block;
-    position: fixed;
+    filter: invert(100%);
+    margin-left: 15px;
+    margin-top: 10px;
 }
 
 .profileh3 {
@@ -161,13 +138,6 @@ footer {
     margin-top: 430px;
     text-align: left;
     text-justify: inter-word;
-}
-
-/* Texto do footer */
-.boas {
-    margin-top: 20px;
-    display: inline-block;
-    color: #b8b8b8;
 }
 
 /* Estilo do menu */
