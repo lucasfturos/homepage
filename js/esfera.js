@@ -79,3 +79,5 @@ function draw() {
     $.restore();
     esfera.update();
 }
+
+document.getElementById("play").addEventListener("click", draw);
