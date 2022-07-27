@@ -1,0 +1,158 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: black;
+    width: 100%;
+    height: 60px;
+    bottom: 0%;
+    position: relative;
+}
+
+ul,
+li {
+    color: #b8b8b8;
+}
+
+h1,
+h2,
+h3,
+h5,
+h6 {
+    color: #b8b8b8;
+}
+
+h6 {
+    font-size: small;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+.main {
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(linear, #000000, #001338, #4b566b);
+    background: -webkit-gradient(linear, center top, center bottom, from(#000000), color-stop(50%, #001338), to(#4b566b));
+    background: -moz-linear-gradient(top, #000000, #001338, #4b566b);
+}
+
+.main1 {
+    background: -webkit-linear-gradient(linear, #000000, #001338, #4b566b);
+    background: -webkit-gradient(linear, center top, center bottom, from(#000000), color-stop(50%, #001338), to(#4b566b));
+    background: -moz-linear-gradient(top, #000000, #001338, #4b566b);
+}
+
+a:link {
+    text-decoration: none
+}
+
+a:visited {
+    text-decoration: none
+}
+
+a:active {
+    text-decoration: none
+}
+
+a:hover {
+    text-decoration: none
+}
+
+footer {
+    min-height: 70px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-top: none;
+    margin-top: 20px;
+    line-height: 15px;
+    position: fixed;
+}
+
+/* Imagens */
+
+.profile {
+    max-width: 284px;
+    max-height: 284px;
+    border-radius: 50%;
+    margin-top: 100px;
+    position: fixed;
+    display: inline-block;
+}
+
+.github {
+    max-width: 35px;
+    max-height: 35px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    border-width: 0;
+    filter: invert(100%);
+    margin-top: 10px;
+}
+
+.linkedin {
+    max-width: 35px;
+    max-height: 35px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    border-width: 0;
+    filter: invert(100%);
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.instagram {
+    max-width: 35px;
+    max-height: 35px;
+    width: auto;
+    height: auto;
+    display: inline-block;
+    border-width: 0;
+    filter: invert(100%);
+    margin-left: 15px;
+    margin-top: 10px;
+}
+
+.profileh3 {
+    display: inline-block;
+    position: fixed;
+    color: #b8b8b8;
+    margin-top: 394px;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.profileh5 {
+    display: inline-block;
+    position: fixed;
+    color: #b8b8b8;
+    margin-top: 430px;
+    text-align: left;
+    text-justify: inter-word;
+}
+
+/* Estilo do menu */
+.dark {
+    background-color: #000000;
+    color: #fff;
+    font-size: larger;
+}
+
+#esfera3d {
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
