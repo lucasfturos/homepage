@@ -32,10 +32,10 @@ class Point {
 class Sphere {
     constructor(radius = 20, vertexQuantity = 20) {
         this.point = [];
-        this.vertexQuantity = vertexQuantity;
         this.color = "rgb(255,255,255)";
         this.radius = radius;
         this.numVertexes = 0;
+        this.vertexQuantity = vertexQuantity;
         this.rotation = 0;
         this.distance = 0;
         this.init();
@@ -46,12 +46,12 @@ class Sphere {
             for (let beta = increment; beta <= pi; beta += increment) {
                 let p = (this.point[this.numVertexes] = new Point());
                 p.x = Math.cos(alpha) * Math.sin(beta) * this.radius;
-                //p.y = Math.sin(alpha) * Math.cos(alpha) * (this.radius / 2); //torus
-                p.y = Math.sin(alpha) * this.radius; //esfera
+                p.y = Math.sin(alpha) * this.radius;
                 p.z = Math.cos(alpha) * Math.cos(beta) * this.radius;
                 this.numVertexes++;
             }
         }
+
     }
     draw() {
         let x, y;

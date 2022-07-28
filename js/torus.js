@@ -40,10 +40,11 @@ class Point {
 }
 
 class Torus {
-    constructor(radius = 20, vertexQuantity = 20) {
+    constructor(innerRadius = 5, outterRadius = 10, vertexQuantity = 20) {
         this.point = [];
         this.color = "rgb(255,255,255)";
-        this.radius = radius;
+        this.innerRadius = innerRadius;
+        this.outterRadius = outterRadius;
         this.numVertexes = 0;
         this.vertexQuantity = vertexQuantity;
         this.rotation = 0;
@@ -53,15 +54,14 @@ class Torus {
     init() {
         let increment = pi / this.vertexQuantity;
         for (let alpha = increment; alpha <= 2 * pi; alpha += increment) {
-            for (let beta = increment; beta <= pi; beta += increment) {
+            for (let beta = increment; beta <= 2 * pi; beta += increment) {
                 let p = (this.point[this.numVertexes] = new Point());
-                p.x = Math.cos(alpha) * Math.sin(beta) * this.radius;
-                p.y = Math.sin(alpha) * Math.cos(alpha) * (this.radius / 2); //torus
-                p.z = Math.cos(alpha) * Math.cos(beta) * this.radius;
+                p.x = (this.outterRadius + this.innerRadius * Math.cos(beta)) * Math.cos(alpha);
+                p.y = (this.outterRadius + this.innerRadius * Math.cos(beta)) * Math.sin(alpha);
+                p.z = this.innerRadius * Math.sin(beta);
                 this.numVertexes++;
             }
         }
-
     }
     draw() {
         let x, y;
