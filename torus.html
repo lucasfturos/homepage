@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <title>Lucas Felipe Turos</title>
+    <meta name="author" content="Lucas Felipe Turos">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto+Condensed" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <!--Prism.js - https://prismjs.com/ -->
+    <link rel="stylesheet" type="text/css" href="css/prism.css">
+    <!-- Site dos Icones -->
+    <meta name="author-icon" content="GitHub Icon - Github ícones criados por Pixel
+    perfect - Flaticon" href="https://www.flaticon.com/br/icones-gratis/github" title="github ícones">
+    <meta name="author-icon" content="Instagram ícones criados por Pixel perfect - Flaticon"
+        href="https://www.flaticon.com/free-icons/instagram" title="instagram ícones">
+    <meta name="author-icon" content="https://www.flaticon.com/" title="linkedin">
+</head>
+<header>
+    <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas dark offcanvas-start" tabindex="-1" id="navbarOffcanvasLg"
+                aria-labelledby="navbarOffcanvasLgLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="curriculo.html">Currículo</a>
+                        </li>
+                        <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
+                            <ul class="navbar-nav">
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle active" href="#" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">
+                                        Modelos3D
+                                    </a>
+                                    <ul class="dropdown-menu dropdown-menu-dark">
+                                        <li><a class="dropdown-item" href="esfera.html">Esfera</a></li>
+                                        <li><a class="dropdown-item disabled" href="#">Torus</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </ul>
+                    <div class="container-fluid d-flex justify-content-end flex-grow-3 pe-3">
+                        <a href="https://github.com/lucasfturos" target="_blank">
+                            <img class="github" src="img/github.png">
+                        </a>
+                        <a href="https://www.linkedin.com/in/lucas-felipe-turos/" target="_blank">
+                            <img class="linkedin" src="img/linkedin.png">
+                        </a>
+                        <a href="https://www.instagram.com/lucasfturos/" target="_blank">
+                            <img class="instagram" src="img/instagram.png">
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<body class="main1"><br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <button type="button" class="btn btn-dark text-white" data-bs-toggle="collapse"
+                    data-bs-target="#linux">Show/Hide
+                    Code</button>
+                <div id="linux" class="collapse">
+                    <pre><code class="language-javascript">
+                        const c = document.getElementById("torus");
+                        const $ = c.getContext("2d");
+                        const w = (c.width = 480);
+                        const h = (c.height = 480);
+                        const pi = 3.1415926535897932384626433832795028841971;
+                        document.body.appendChild(c);
+
+                        class Point {
+                            constructor(x, y, z) {
+                                this.x = x;
+                                this.y = y;
+                                this.z = z;
+                            }
+                            rotateX(amount) {
+                                let y = this.y;
+                                this.y = (y * Math.cos(amount)) + (this.z * Math.sin(amount) * -1.0);
+                                this.z = (y * Math.sin(amount)) + (this.z * Math.cos(amount));
+                            }
+                            rotateY(amount) {
+                                let x = this.x;
+                                this.x = x * Math.cos(amount) + this.z * Math.sin(amount) * -1.0;
+                                this.z = x * Math.sin(amount) + this.z * Math.cos(amount);
+                            }
+                            rotateZ(amount) {
+                                let x = this.x;
+                                this.x = (x * Math.cos(amount)) + (this.y * Math.sin(amount) * -1.0);
+                                this.y = (x * Math.sin(amount)) + (this.y * Math.cos(amount));
+                            }
+                            getProjection(distance, xy, offSet, offSetZ) {
+                                return (distance * xy) / (this.z - offSetZ) + offSet;
+                            }
+                            draw(x, y, size, color) {
+                                $.save();
+                                $.beginPath();
+                                $.fillStyle = "rgb(255,255,255)";
+                                $.arc(x, y, 1.5, 0, 2 * pi, true);
+                                $.fill();
+                                $.restore();
+                            }
+                        }
+
+                        class Torus {
+                            constructor(innerRadius = 5, outterRadius = 10, vertexQuantity = 20) {
+                                this.point = [];
+                                this.color = "rgb(255,255,255)";
+                                this.innerRadius = innerRadius;
+                                this.outterRadius = outterRadius;
+                                this.numVertexes = 0;
+                                this.vertexQuantity = vertexQuantity;
+                                this.rotation = 0;
+                                this.distance = 0;
+                                this.init();
+                            }
+                            init() {
+                                let increment = pi / this.vertexQuantity;
+                                for (let alpha = increment; alpha <= 2 * pi; alpha += increment) {
+                                    for (let beta = increment; beta <= 2 * pi; beta += increment) {
+                                        let p = (this.point[this.numVertexes] = new Point());
+                                        p.x = (this.outterRadius + this.innerRadius * Math.cos(beta)) * Math.cos(alpha);
+                                        p.y = (this.outterRadius + this.innerRadius * Math.cos(beta)) * Math.sin(alpha);
+                                        p.z = this.innerRadius * Math.sin(beta);
+                                        this.numVertexes++;
+                                    }
+                                }
+                            }
+                            draw() {
+                                let x, y;
+                                let p = new Point();
+                                for (let i = 0; i < this.numVertexes; i++) {
+                                    p.x = this.point[i].x;
+                                    p.y = this.point[i].y;
+                                    p.z = this.point[i].z;
+                                    p.rotateX(this.rotation);
+                                    p.rotateY(this.rotation);
+                                    p.rotateZ(this.rotation);
+                                    x = p.getProjection(this.distance, p.x, w / 2.0, 100.0);
+                                    y = p.getProjection(this.distance, p.y, h / 2.0, 100.0);
+                                    p.draw(x, y);
+                                }
+                            }
+                            update() {
+                                this.rotation += pi / 360.0;
+                                this.distance = 900;
+                            }
+                        }
+                        const toroide = new Torus();
+                        function draw() {
+                            window.requestAnimationFrame(draw);
+                            $.save();
+                            $.clearRect(0, 0, w, h);
+                            toroide.draw();
+                            $.restore();
+                            toroide.update();
+                        }
+
+                        document.getElementById("play").addEventListener("click", draw);
+                    </code></pre>
+                </div>
+            </div>
+        </div>
+        <div class="d-flex justify-content-center">
+            <div class="row my-2" style="margin-top: 20px;">
+                <div class="col">
+                    <button class="btn btn-dark" id="play" style="margin-right: 10px;">Play</button>
+                    <button class="btn btn-dark" onClick="window.location.reload();">Restart</button><br><br>
+                    <h3 class="d-flex justify-content-center">Torus</h3>
+                    <canvas id="torus">
+                        <h2>Seu Navegador Não Suporta Canvas</h2>
+                    </canvas>
+                    <script type="text/javascript" src="js/torus.js"></script>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Prism.js - https://prismjs.com/-->
+    <script type="text/javascript" src="js/prism.js"></script>
+    <!-- Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
+        integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
+        integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
