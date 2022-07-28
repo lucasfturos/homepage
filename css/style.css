@@ -149,7 +149,8 @@ footer {
     font-size: larger;
 }
 
-#esfera3d {
+#esfera3d,
+#torus {
     background: transparent;
     position: absolute;
     top: 50%;
