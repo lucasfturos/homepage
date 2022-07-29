@@ -1,4 +1,4 @@
-Site de Portfólio e teste do recurso GitHub Pages
+Site de Portfólio e testes dos recursos do GitHub Pages
 
 Será feito usando HTML, CSS e JavaScript
 
