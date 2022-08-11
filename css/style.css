@@ -89,7 +89,7 @@ footer {
     border-radius: 50%;
     margin-top: 100px;
     position: fixed;
-    display: inline-block;
+    display: inline-flex;
 }
 
 .github {
@@ -97,7 +97,7 @@ footer {
     max-height: 35px;
     width: auto;
     height: auto;
-    display: inline-block;
+    display: inline-flex;
     border-width: 0;
     filter: invert(100%);
     margin-top: 10px;
@@ -108,7 +108,7 @@ footer {
     max-height: 35px;
     width: auto;
     height: auto;
-    display: inline-block;
+    display: inline-flex;
     border-width: 0;
     filter: invert(100%);
     margin-left: 15px;
@@ -120,7 +120,7 @@ footer {
     max-height: 35px;
     width: auto;
     height: auto;
-    display: inline-block;
+    display: inline-flex;
     border-width: 0;
     filter: invert(100%);
     margin-left: 15px;
@@ -128,7 +128,7 @@ footer {
 }
 
 .profileh3 {
-    display: inline-block;
+    display: inline-flex;
     position: fixed;
     color: #b8b8b8;
     margin-top: 394px;
@@ -137,7 +137,7 @@ footer {
 }
 
 .profileh5 {
-    display: inline-block;
+    display: inline-flex;
     position: fixed;
     color: #b8b8b8;
     margin-top: 430px;
@@ -152,6 +152,8 @@ footer {
     font-size: larger;
 }
 
+/* Estilo dos modelos 3D */
+
 #esfera3d,
 #torus {
     margin-top: 90px;
@@ -160,4 +162,14 @@ footer {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+/* Estilo da data e hora */
+
+#data,
+#hora {
+    color: #fff;
+    font-size: 144px;
+    font-weight: 300;
+    align-self: center;
 }

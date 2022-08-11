@@ -17,6 +17,7 @@
     <meta name="author-icon" content="Instagram ícones criados por Pixel perfect - Flaticon"
         href="https://www.flaticon.com/free-icons/instagram" title="instagram ícones">
     <meta name="author-icon" content="https://www.flaticon.com/" title="linkedin">
+    
 </head>
 <header>
     <nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
@@ -33,13 +34,13 @@
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Início</a>
+                            <a class="nav-link" aria-current="page" href="index.html">Início</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="curriculo.html">Currículo</a>
                         </li>
                         <li class="nav-item">
-                            <a href="data_hora.html" class="nav-link">Data/Hora</a>
+                            <a href="#" class="nav-link active">Data/Hora</a>
                         </li>
                         <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
                             <ul class="navbar-nav">
@@ -53,7 +54,7 @@
                                         <li><a class="dropdown-item" href="torus.html">Torus</a>
                                         </li>
                                     </ul>
-                                </li>
+                                </li>  
                             </ul>
                         </div>
                     </ul>
@@ -76,16 +77,25 @@
 </header>
 
 <body class="main">
-    <div class="container-fluid">
-        <div class="d-flex justify-content-center">
-            <img class="profile" src="img/minhaFoto.jpg">
-            <h3 class="profileh3">Olá, sou Lucas Felipe Turos</h3>
-            <h5 class="profileh5">Programador | Matemático</h5>
+    <div class="container text-center">
+        <div class="row ">
+            <div class="col"><h1 style="margin-top: 50px;">Hora</h1></div>
+        </div>
+        <div class="row ">
+            <div class="col" id="hora"></div>
+        </div>
+        <div class="row">
+            <div class="col"><h1>Data</h1></div>
+        </div>
+        <div class="row ">
+            <div class="col" id="data"></div>
         </div>
     </div>
     <footer>
 
     </footer>
+    <!--  -->
+    <script src="js/data_hora.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
         integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk"
