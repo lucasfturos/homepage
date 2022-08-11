@@ -1,8 +1,6 @@
-## Site de Portfólio
+## Site de Portfólio. Feito em HTML, CSS e JavaScript
 
 Testes dos recursos do GitHub Pages
-
-## Site feito em HTML, CSS e JavaScript
 
 ## Por enquanto o site tem:
 - **Uma apresentação;**
