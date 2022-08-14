@@ -49,7 +49,6 @@ html,
     background: -webkit-linear-gradient(linear, #000000, #001338, #4b566b);
     background: -webkit-gradient(linear, center top, center bottom, from(#000000), color-stop(50%, #001338), to(#4b566b));
     background: -moz-linear-gradient(top, #000000, #001338, #4b566b);
-    margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
 }
@@ -98,9 +97,11 @@ footer {
     width: auto;
     height: auto;
     display: inline-flex;
+    font-size: 35px;
     border-width: 0;
     filter: invert(100%);
     margin-top: 10px;
+
 }
 
 .linkedin {
@@ -109,6 +110,7 @@ footer {
     width: auto;
     height: auto;
     display: inline-flex;
+    font-size: 35px;
     border-width: 0;
     filter: invert(100%);
     margin-left: 15px;
@@ -122,6 +124,7 @@ footer {
     height: auto;
     display: inline-flex;
     border-width: 0;
+    font-size: 35px;
     filter: invert(100%);
     margin-left: 15px;
     margin-top: 10px;
@@ -150,6 +153,8 @@ footer {
     background-color: #000000;
     color: #fff;
     font-size: larger;
+    height: 60%;
+    border-bottom-right-radius: 10px;
 }
 
 /* Estilo dos modelos 3D */
@@ -169,7 +174,74 @@ footer {
 #data,
 #hora {
     color: #fff;
-    font-size: 144px;
+    font-size: 96px;
     font-weight: 300;
     align-self: center;
+    /* animation: glitch 1s linear infinite; */
 }
+
+/* Animação de glitch */
+/* @keyframes glitch {
+
+    2%,
+    64% {
+        transform: translate(1px, 0) skew(0deg);
+    }
+
+    4%,
+    60% {
+        transform: translate(-1px, 0) skew(0deg);
+    }
+
+    62% {
+        transform: translate(0, 0) skew(5deg);
+    }
+}
+
+#hora:before,
+#data:before {
+    animation: glitchTop 1s linear infinite;
+    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
+}
+
+@keyframes glitchTop {
+
+    2%,
+    64% {
+        transform: translate(2px, -2px);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 2px);
+    }
+
+    62% {
+        transform: translate(13px, -1px) skew(-13deg);
+    }
+}
+
+#hora:after,
+#data:after {
+    animation: glitchBottom 1.5s linear infinite;
+    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
+}
+
+@keyframes glitchBottom {
+
+    2%,
+    64% {
+        transform: translate(2px, -2px);
+    }
+
+    4%,
+    60% {
+        transform: translate(-2px, 0);
+    }
+
+    62% {
+        transform: translate(-22px, 5px) skew(21deg);
+    }
+} */

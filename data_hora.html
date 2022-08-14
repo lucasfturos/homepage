@@ -28,8 +28,8 @@
             <div class="offcanvas dark offcanvas-start" tabindex="-1" id="navbarOffcanvasLg"
                 aria-labelledby="navbarOffcanvasLgLabel">
                 <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    <button type="button" class="btn-close offcanvas-title" 
+                    data-bs-dismiss="offcanvas" aria-label="Close"><h3>X</h3></button>
                 </div>
                 <div class="offcanvas-body">
                     <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
@@ -60,13 +60,13 @@
                     </ul>
                     <div class="container-fluid d-flex justify-content-end flex-grow-3 pe-3">
                         <a href="https://github.com/lucasfturos" target="_blank">
-                            <img class="github" src="img/github.png">
+                            <div class="github"><ion-icon name="logo-github"></ion-icon></div>
                         </a>
                         <a href="https://www.linkedin.com/in/lucas-felipe-turos/" target="_blank">
-                            <img class="linkedin" src="img/linkedin.png">
+                            <div class="linkedin"><ion-icon name="logo-linkedin"></ion-icon></div>
                         </a>
                         <a href="https://www.instagram.com/lucasfturos/" target="_blank">
-                            <img class="instagram" src="img/instagram.png">
+                            <div class="instagram"><ion-icon name="logo-instagram"></ion-icon></div>
                         </a>
                     </div>
                 </div>
@@ -94,7 +94,7 @@
     <footer>
 
     </footer>
-    <!--  -->
+    <!-- Javascript da aplicação -->
     <script src="js/data_hora.js"></script>
     <!-- Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js"
@@ -103,7 +103,9 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.min.js"
         integrity="sha384-kjU+l4N0Yf4ZOJErLsIcvOU2qSb74wXpOhqTvwVx3OElZRweTnQ6d31fXEoRD1Jy"
         crossorigin="anonymous"></script>
-
+    <!-- Ionic - Ionicons - https://ionic.io/ionicons-->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </body>
 
 </html>
