@@ -150,19 +150,23 @@ footer {
 
 /* Estilo do menu */
 .dark {
-    background-color: #000000;
+    background-color: #212529;
     color: #fff;
-    font-size: larger;
+    font-size: 20px;
     height: 60%;
     border-bottom-right-radius: 10px;
 }
 
 .dark_dropdown {
-    background-color: #000000;
+    background-color: #212529;
     color: #fff;
     font-size: medium;
-    height: 60%;
-    border-bottom-right-radius: 10px;
+    border: none;
+    border-radius: 0;
+}
+
+.btn-close {
+    filter: invert(1);
 }
 
 /* Estilo dos modelos 3D */

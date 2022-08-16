@@ -9,7 +9,7 @@ template.innerHTML = `
         aria-labelledby="navbarOffcanvasLgLabel">
         <div class="offcanvas-header">
             <button type="button" class="btn-close offcanvas-title" 
-            data-bs-dismiss="offcanvas" aria-label="Close"><h3>X</h3></button>
+            data-bs-dismiss="offcanvas" aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
             <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
