@@ -22,21 +22,16 @@ template.innerHTML = `
                 <li class="nav-item">
                     <a href="data_hora.html" class="nav-link active">Data/Hora</a>
                 </li>
-                <div class="collapse navbar-collapse" id="navbarNavDarkDropdown">
-                    <ul class="navbar-nav">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link active dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Modelos3D
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-dark">
-                                <li><a class="dropdown-item" href="esfera.html">Esfera</a></li>
-                                <li><a class="dropdown-item" href="torus.html">Torus</a>
-                                </li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link active dropdown-toggle" href="#" role="button" 
+                        data-bs-toggle="dropdown" aria-expanded="false">Modelos3D</a>
+                        <ul class="dropdown-menu dropdown-menu-dark dark_dropdown">
+                            <li><a class="dropdown-item" href="esfera.html">Esfera</a></li>
+                            <li><a class="dropdown-item" href="torus.html">Torus</a></li>
+                        </ul>
+                    </li>
+                </ul>
             </ul>
             <div class="container-fluid d-flex justify-content-end flex-grow-3 pe-3">
                 <a href="https://github.com/lucasfturos" target="_blank">

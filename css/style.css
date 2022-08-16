@@ -157,6 +157,14 @@ footer {
     border-bottom-right-radius: 10px;
 }
 
+.dark_dropdown {
+    background-color: #000000;
+    color: #fff;
+    font-size: medium;
+    height: 60%;
+    border-bottom-right-radius: 10px;
+}
+
 /* Estilo dos modelos 3D */
 
 #esfera3d,
