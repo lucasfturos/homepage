@@ -99,7 +99,7 @@ footer {
     display: inline-flex;
     font-size: 35px;
     border-width: 0;
-    filter: invert(100%);
+    color: #fff;
     margin-top: 10px;
 
 }
@@ -111,8 +111,8 @@ footer {
     height: auto;
     display: inline-flex;
     font-size: 35px;
+    color: #fff;
     border-width: 0;
-    filter: invert(100%);
     margin-left: 15px;
     margin-top: 10px;
 }
@@ -125,7 +125,7 @@ footer {
     display: inline-flex;
     border-width: 0;
     font-size: 35px;
-    filter: invert(100%);
+    color: #fff;
     margin-left: 15px;
     margin-top: 10px;
 }
@@ -177,71 +177,4 @@ footer {
     font-size: 96px;
     font-weight: 300;
     align-self: center;
-    /* animation: glitch 1s linear infinite; */
 }
-
-/* Animação de glitch */
-/* @keyframes glitch {
-
-    2%,
-    64% {
-        transform: translate(1px, 0) skew(0deg);
-    }
-
-    4%,
-    60% {
-        transform: translate(-1px, 0) skew(0deg);
-    }
-
-    62% {
-        transform: translate(0, 0) skew(5deg);
-    }
-}
-
-#hora:before,
-#data:before {
-    animation: glitchTop 1s linear infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-@keyframes glitchTop {
-
-    2%,
-    64% {
-        transform: translate(2px, -2px);
-    }
-
-    4%,
-    60% {
-        transform: translate(-2px, 2px);
-    }
-
-    62% {
-        transform: translate(13px, -1px) skew(-13deg);
-    }
-}
-
-#hora:after,
-#data:after {
-    animation: glitchBottom 1.5s linear infinite;
-    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
-@keyframes glitchBottom {
-
-    2%,
-    64% {
-        transform: translate(2px, -2px);
-    }
-
-    4%,
-    60% {
-        transform: translate(-2px, 0);
-    }
-
-    62% {
-        transform: translate(-22px, 5px) skew(21deg);
-    }
-} */
