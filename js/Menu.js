@@ -1,11 +1,11 @@
 const template = document.createElement('template');
 template.innerHTML = `
-<nav class="navbar navbar-dark navbar-expand-lg bg-dark fixed-top">
+<nav class="navbar navbar-dark dark_menu navbar-expand-lg dark_menu fixed-top">
 <div class="container-fluid">
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#navbarOffcanvasLg">
         <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="offcanvas dark offcanvas-start" tabindex="-1" id="navbarOffcanvasLg"
+    <div class="offcanvas dark_menu_mobile offcanvas-start" tabindex="-1" id="navbarOffcanvasLg"
         aria-labelledby="navbarOffcanvasLgLabel">
         <div class="offcanvas-header">
             <button type="button" class="btn-close offcanvas-title" 

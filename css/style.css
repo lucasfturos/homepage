@@ -149,8 +149,12 @@ footer {
 }
 
 /* Estilo do menu */
-.dark {
-    background-color: #212529;
+.dark_menu {
+    background-color: #000000;
+}
+
+.dark_menu_mobile {
+    background-color: #000000;
     color: #fff;
     font-size: 20px;
     height: 60%;
@@ -158,7 +162,7 @@ footer {
 }
 
 .dark_dropdown {
-    background-color: #212529;
+    background-color: #000000;
     color: #fff;
     font-size: medium;
     border: none;
@@ -167,6 +171,11 @@ footer {
 
 .btn-close {
     filter: invert(1);
+}
+
+.btn-dark {
+    background-color: #000000;
+    border: none;
 }
 
 /* Estilo dos modelos 3D */
@@ -189,4 +198,16 @@ footer {
     font-size: 96px;
     font-weight: 300;
     align-self: center;
+}
+
+
+@media screen and (max-width: 25em) {
+
+    #data,
+    #hora {
+        color: #fff;
+        font-size: 50px;
+        font-weight: 300;
+        align-self: center;
+    }
 }
