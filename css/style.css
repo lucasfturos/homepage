@@ -210,4 +210,12 @@ footer {
         font-weight: 300;
         align-self: center;
     }
+
+    #esfera3d {
+        width: 90%;
+        margin-top: 90px;
+        background: transparent;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
 }
