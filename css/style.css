@@ -200,7 +200,22 @@ footer {
     align-self: center;
 }
 
+.display, #data,#hora{
+    line-height: 85px;
+    letter-spacing: 1px;
+    background:linear-gradient(135deg,#14ffe9,#ffeb3b,#ff00e0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 1.5s linear infinite;
+}
 
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+
+/* Ajuste da tela em smartphone */
 @media screen and (max-width: 25em) {
 
     #data,
@@ -211,7 +226,7 @@ footer {
         align-self: center;
     }
 
-    #esfera3d {
+    #esfera3d,#torus {
         width: 90%;
         margin-top: 90px;
         background: transparent;

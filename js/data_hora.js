@@ -22,6 +22,7 @@ const currentDate = () => {
     let month = date.getMonth() + 1
     let day = date.getDate()
 
+    day = day < 10 ? `0${day}` : day
     month = month < 10 ? `0${month}` : month
 
     elementData.innerHTML = day + "/" + `${month}` + "/" + year
