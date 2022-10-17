@@ -1,10 +1,10 @@
 ---
 layout: default
-title: Toróide
 ---
-    
-<div class="main1"><br>
 
+<div class="main1" style="position: static;"><br>
+    
+    
     <div class="container">
         <div class="row">
             <div class="col">
@@ -13,7 +13,7 @@ title: Toróide
                     Code</button>
                 <div id="linux" class="collapse">
                     <pre><code class="language-javascript">
-                        const c = document.getElementById("torus");
+                        const c = document.getElementById("esfera3d");
                         const $ = c.getContext("2d");
                         const w = (c.width = 480);
                         const h = (c.height = 480);
@@ -26,20 +26,10 @@ title: Toróide
                                 this.y = y;
                                 this.z = z;
                             }
-                            rotateX(amount) {
-                                let y = this.y;
-                                this.y = (y * Math.cos(amount)) + (this.z * Math.sin(amount) * -1.0);
-                                this.z = (y * Math.sin(amount)) + (this.z * Math.cos(amount));
-                            }
                             rotateY(amount) {
                                 let x = this.x;
                                 this.x = x * Math.cos(amount) + this.z * Math.sin(amount) * -1.0;
                                 this.z = x * Math.sin(amount) + this.z * Math.cos(amount);
-                            }
-                            rotateZ(amount) {
-                                let x = this.x;
-                                this.x = (x * Math.cos(amount)) + (this.y * Math.sin(amount) * -1.0);
-                                this.y = (x * Math.sin(amount)) + (this.y * Math.cos(amount));
                             }
                             getProjection(distance, xy, offSet, offSetZ) {
                                 return (distance * xy) / (this.z - offSetZ) + offSet;
@@ -53,13 +43,12 @@ title: Toróide
                                 $.restore();
                             }
                         }
-
-                        class Torus {
-                            constructor(innerRadius = 5, outterRadius = 10, vertexQuantity = 20) {
+                        
+                        class Sphere {
+                            constructor(radius = 20, vertexQuantity = 20) {
                                 this.point = [];
                                 this.color = "rgb(255,255,255)";
-                                this.innerRadius = innerRadius;
-                                this.outterRadius = outterRadius;
+                                this.radius = radius;
                                 this.numVertexes = 0;
                                 this.vertexQuantity = vertexQuantity;
                                 this.rotation = 0;
@@ -69,14 +58,15 @@ title: Toróide
                             init() {
                                 let increment = pi / this.vertexQuantity;
                                 for (let alpha = increment; alpha <= 2 * pi; alpha += increment) {
-                                    for (let beta = increment; beta <= 2 * pi; beta += increment) {
+                                    for (let beta = increment; beta <= pi; beta += increment) {
                                         let p = (this.point[this.numVertexes] = new Point());
-                                        p.x = (this.outterRadius + this.innerRadius * Math.cos(beta)) * Math.cos(alpha);
-                                        p.y = (this.outterRadius + this.innerRadius * Math.cos(beta)) * Math.sin(alpha);
-                                        p.z = this.innerRadius * Math.sin(beta);
+                                        p.x = Math.cos(alpha) * Math.sin(beta) * this.radius;
+                                        p.y = Math.sin(alpha) * this.radius;
+                                        p.z = Math.cos(alpha) * Math.cos(beta) * this.radius;
                                         this.numVertexes++;
                                     }
                                 }
+                        
                             }
                             draw() {
                                 let x, y;
@@ -85,9 +75,7 @@ title: Toróide
                                     p.x = this.point[i].x;
                                     p.y = this.point[i].y;
                                     p.z = this.point[i].z;
-                                    p.rotateX(this.rotation);
                                     p.rotateY(this.rotation);
-                                    p.rotateZ(this.rotation);
                                     x = p.getProjection(this.distance, p.x, w / 2.0, 100.0);
                                     y = p.getProjection(this.distance, p.y, h / 2.0, 100.0);
                                     p.draw(x, y);
@@ -98,31 +86,31 @@ title: Toróide
                                 this.distance = 900;
                             }
                         }
-                        const toroide = new Torus();
+                        const esfera = new Sphere();
                         function draw() {
                             window.requestAnimationFrame(draw);
                             $.save();
                             $.clearRect(0, 0, w, h);
-                            toroide.draw();
+                            esfera.draw();
                             $.restore();
-                            toroide.update();
+                            esfera.update();
                         }
-
+                        
                         document.getElementById("play").addEventListener("click", draw);
                     </code></pre>
                 </div>
             </div>
         </div>
         <div class="d-flex justify-content-center">
-            <div class="row my-2" style="margin-top: 20px;">
+            <div class="row my-2" style="margin-top: 30px;">
                 <div class="col">
                     <button class="btn btn-dark" id="play" style="margin-right: 10px;">Play</button>
                     <button class="btn btn-dark" onClick="window.location.reload();">Restart</button><br><br>
-                    <h3 class="d-flex justify-content-center">Torus</h3>
-                    <canvas id="torus">
+                    <h3 class="d-flex justify-content-center">Esfera</h3>
+                    <canvas id="esfera3d">
                         <h2>Seu Navegador Não Suporta Canvas</h2>
                     </canvas>
-                    <script type="text/javascript" src="/js/torus.js"></script>
+                    <script type="text/javascript" src="/js/esfera.js"></script>
                 </div>
             </div>
         </div>

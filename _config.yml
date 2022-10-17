@@ -2,9 +2,37 @@ title: Teste de postagem
 description: >- # this means to ignore newlines until "baseurl:"
   Aqui fica a descrição de cada projeto que desenvolvi
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://lucasfturos.github.io/myhomepage/" # the base hostname & protocol for your site, e.g. http://example.com
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
+  - jekyll-include-cache
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "curriculo"
+  - scope:
+      path: ""
+    values:
+      layout: "data_hora"
+  - scope:
+      path: ""
+    values:
+      layout: "esfera"
+  - scope:
+      path: ""
+    values:
+      layout: "torus"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "portfolio"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
