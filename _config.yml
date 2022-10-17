@@ -1,9 +1,9 @@
 title: Teste de postagem
 description: >- # this means to ignore newlines until "baseurl:"
   Aqui fica a descrição de cada projeto que desenvolvi
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://lucasfturos.github.io/myhomepage" # the base hostname & protocol for your site, e.g. http://example.com
-
+baseurl: "myhomepage/" # the subpath of your site, e.g. /blog
+url: "https://lucasfturos.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
+domain: "lucasfturos.github.io"
 # Build settings
 theme: minima
 plugins:
