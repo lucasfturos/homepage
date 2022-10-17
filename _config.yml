@@ -4,6 +4,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 baseurl: "myhomepage/" # the subpath of your site, e.g. /blog
 url: "https://lucasfturos.github.io/" # the base hostname & protocol for your site, e.g. http://example.com
 domain: "lucasfturos.github.io"
+markdown: kramdown
 # Build settings
 theme: minima
 plugins:
