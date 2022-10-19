@@ -249,8 +249,8 @@ footer {
         margin: 5px;
     }
     
-    .card-container img {
-        margin-right: 50%;
+    .card-container .img-card {
+        max-height: 50%;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
     }
