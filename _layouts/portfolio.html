@@ -6,42 +6,18 @@ layout: default
 
     <div class="container-fluid port-container d-flex justify-content-center">
       <div class="card-container row">
-        <div class="card">
-            <img src="{{"img/tela do pong.png" | relative_url}}" class="card-img-top img-card" alt="...">
-            <div class="card-body">
-              <h2 class="card-title">{{ site.title}}</h2>
-              <p class="card-text">{{ site.description }}</p>
-              <a href="#" class="btn btn-dark btn-card">Ver mais</a>
-              <time>{{ site.date }}</time>
-            </div>
-          </div>
+        {% for post in site.posts %}
           <div class="card">
-            <img src="{{"img/tela do pong.png" | relative_url}}" class="card-img-top img-card" alt="...">
+            <img src="{{ post.image }}" 
+              class="card-img-top img-card" alt="...">
             <div class="card-body">
-              <h5 class="card-title">{{ site.title}}</h5>
-              <p class="card-text">{{ site.description }}</p>
-              <a href="#" class="btn btn-dark btn-card">Ver mais</a>
-              <time>{{ site.date }}</time>
+              <h2 class="card-title">{{ post.title}}</h2>
+              <p class="card-text">{{ post.description }}</p>
+              <a href="{{ post.url}}" class="btn btn-dark btn-card">Ver mais</a>
+              <time class="card-data">{{ post.date | date: "%b, %-d/%-m/%Y"}}</time>
             </div>
           </div>
-          <div class="card">
-            <img src="{{"img/tela do pong.png" | relative_url}}" class="card-img-top img-card" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{ site.title}}</h5>
-              <p class="card-text">{{ site.description }}</p>
-              <a href="#" class="btn btn-dark btn-card">Ver mais</a>
-              <time>{{ site.date }}</time>
-            </div>
-          </div>
-          <div class="card">
-            <img src="{{"img/tela do pong.png" | relative_url}}" class="card-img-top img-card" alt="...">
-            <div class="card-body">
-              <h5 class="card-title">{{ site.title}}</h5>
-              <p class="card-text">{{ site.description }}</p>
-              <a href="#" class="btn btn-dark btn-card">Ver mais</a>
-              <time>{{ site.date }}</time>
-            </div>
-          </div>
+        {% endfor %}
       </div>
     </div>
 
