@@ -4,10 +4,24 @@ layout: default
 ---
 
 <body class="main1">
-  <div class="container-fluid">
-    <img src="{{site.baseurl}}{{ page.image }}" class="" alt="" />
-    <h2 class="card-title">{{ page.title}}</h2>
-    <p class="card-text">{{ page.description }}</p>
-    <time class="card-data">{{ page.date | date: "%b, %-d/%-m/%Y"}}</time>
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h2 class="post-title">{{ page.title}}</h2>
+      </div>
+      <div class="col text-end">
+        <time class="post-data">{{ page.date | date: "%b, %-d/%-m/%Y"}}</time>
+      </div>
+      <br />
+    </div>
+    <div class="text-center">
+      <img
+        src="{{ site.baseurl }}{{ page.image }}"
+        class="rounded post-img"
+        alt=""
+      />
+    </div>
+    <br />
+    <p class="post-text">{{ page.description }}</p>
   </div>
 </body>

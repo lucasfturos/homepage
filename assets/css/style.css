@@ -353,3 +353,12 @@ footer {
 }
 
 /* Estilo da postagem */
+
+.post-img {
+  width: 50%;
+}
+.post-title,
+.post-data,
+.post-text {
+  color: #fff;
+}
