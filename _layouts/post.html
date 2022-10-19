@@ -5,7 +5,7 @@ layout: default
 
 <body class="main1">
   <div class="container-fluid">
-    <img src="{{ page.image }}" class="" alt="" />
+    <img src="{{site.baseurl}}{{ page.image }}" class="" alt="" />
     <h2 class="card-title">{{ page.title}}</h2>
     <p class="card-text">{{ page.description }}</p>
     <time class="card-data">{{ page.date | date: "%b, %-d/%-m/%Y"}}</time>
