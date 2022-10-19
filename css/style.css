@@ -234,6 +234,7 @@ footer {
         position: absolute;
         transform: translate(-50%, -50%);
     }
+
 }
 
 /* Card Portfolio */
@@ -251,21 +252,18 @@ footer {
     display: flex;
 }
 
-.card {
-    
-    background-color: transparent;
-    border-color: #000000;
-}
-
 .card-container .card {
     flex: 1 1 1;
-    max-width: 100%;
+    max-width: 45%;
+    max-height: 40%;
     border-radius: 10px;
     padding: 0;
     margin: 5px;
+    background-color: transparent;
+    border-color: #000000;
 }
 .img-card {
-    min-height: 50%;
+    width: 100%;
 }
 .card-container .img-card {
     border-top-left-radius: 10px;
@@ -276,8 +274,46 @@ footer {
     color: #fff;
 }
 
+.card-text {
+    font-size: 18px;
+}
+
+.btn-card {
+    font-size: 18px
+}
+
 .card .card-title {
     font-size: 28px;
     font-weight: bold;
     margin-bottom: 30px;
+}
+
+/* Card Mobile */
+
+@media (max-width: 768px) {
+    
+    .card-text {
+        font-size: 12px;
+    }
+    
+    .btn-card {
+        font-size: 12px
+    }
+    
+    .card .card-title {
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 30px;
+    }
+
+    .card-container .card {
+        flex: 1 1 1;
+        max-width: 45%;
+        max-height: 40%;
+        border-radius: 10px;
+        padding: 0;
+        margin: 5px;
+        background-color: transparent;
+        border-color: #000000;
+    }
 }
