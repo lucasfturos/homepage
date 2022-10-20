@@ -5,23 +5,41 @@ layout: default
 
 <body class="main1">
   <div class="container">
-    <div class="row">
-      <div class="col">
-        <h2 class="post-title">{{ page.title}}</h2>
+    <div class="card post-card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h2 class="post-title">{{ page.title}}</h2>
+            <br />
+          </div>
+          <div class="col text-end">
+            <time class="post-data"
+              >{{ page.date | date: "%B, %-d/%-m/%Y"}}</time
+            >
+          </div>
+          <br />
+        </div>
+        <div class="post-line"></div>
+        <br />
+        <h3 class="post-text">Tela Inicial</h3>
+        <div class="text-center">
+          <img
+            src="{{site.baseurl}}{{ page.image }}"
+            class="rounded post-img"
+            alt=""
+          />
+        </div>
+        <br />
+        <div class="post-line"></div>
+        <br />
+        <h3 class="post-text">Sobre</h3>
+        <p class="post-text">{{ page.description }}</p>
+        <br />
+        <div class="post-line"></div>
+        <br />
+        <h3 class="post-text">Screenshot</h3>
+        <br />
       </div>
-      <div class="col text-end">
-        <time class="post-data">{{ page.date | date: "%b, %-d/%-m/%Y"}}</time>
-      </div>
-      <br />
     </div>
-    <div class="text-center">
-      <img
-        src="{{ site.baseurl }}{{ page.image }}"
-        class="rounded post-img"
-        alt=""
-      />
-    </div>
-    <br />
-    <p class="post-text">{{ page.description }}</p>
   </div>
 </body>
