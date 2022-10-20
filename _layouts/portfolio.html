@@ -7,16 +7,12 @@ layout: default
     <div class="card-container row">
       {% for post in site.posts %}
       <div class="card card-port">
-        <img
-          src="{{site.baseurl}}{{ post.image }}"
-          class="card-img-top img-card"
-          alt="..."
-        />
+        <img src="{{ post.image }}" class="card-img-top img-card" alt="..." />
         <div class="card-body">
           <h2 class="card-title">{{ post.title}}</h2>
           <div class="post-line"></div>
           <br />
-          <p class="card-text">{{ post.description }}</p>
+          <p class="card-text">{{ post.description | truncate: 60 }}</p>
           <a href="{{site.baseurl}}{{ post.url }}" class="btn btn-dark btn-card"
             >Ver mais</a
           >
