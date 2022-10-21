@@ -4,6 +4,7 @@ layout: default
 ---
 
 <body class="main1">
+  {% if page.categorie == "Portfolio" %}
   <div class="container">
     <div class="card post-card">
       <div class="card-body">
@@ -45,9 +46,56 @@ layout: default
             class="rounded post-img"
           />
         </div>
+
         <br />
         {% endfor %}
       </div>
     </div>
   </div>
+  {% endif %} {% if page.categorie == "Artigo" %}
+  <div class="container">
+    <div class="card post-card">
+      <div class="card-body">
+        <div class="row">
+          <div class="col">
+            <h2 class="post-title">{{ page.title}}</h2>
+            <br />
+          </div>
+          <div class="col text-end">
+            <time class="post-data"
+              >{{ page.date | date: "%B, %-d/%-m/%Y"}}</time
+            >
+          </div>
+          <br />
+        </div>
+        <div class="post-line"></div>
+        <br />
+        <h3 class="post-text">Imagem</h3>
+        <div class="text-center">
+          <img
+            src="{{site.baseurl}}{{ page.image }}"
+            class="rounded post-img"
+            alt=""
+          />
+        </div>
+        <br />
+        <div class="post-line"></div>
+        <br />
+        <h3 class="post-text">Introdução</h3>
+        <p class="post-text">{{ page.introduction }}</p>
+        <br />
+        <div class="post-line"></div>
+        <br />
+        <h3 class="post-text">Corpo do texto</h3>
+        <p class="post-text">{{ page.body }}</p>
+        <br />
+        <div class="post-line"></div>
+        <br />
+        <h3 class="post-text">Conclusão</h3>
+        <p class="post-text">{{ page.conclusion }}</p>
+        <br />
+      </div>
+    </div>
+  </div>
+  {% endif %}
 </body>

@@ -1,5 +1,5 @@
 ---
 title: Portfólio
-layout: portfolio
+layout: blog/portfolio
 permalink: "/portfolio.html"
 ---
