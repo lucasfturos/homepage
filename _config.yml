@@ -1,5 +1,6 @@
 author: Lucas Felipe Turos
 baseurl: "/" # the subpath of your site, e.g. /blog
+baseurl1: "" # for test
 url: "https://lucasfturos.github.io/myhomepage" # the base hostname & protocol for your site, e.g. http://example.com
 domain: "lucasfturos.github.io"
 encoding: UTF-8

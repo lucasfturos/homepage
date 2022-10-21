@@ -38,7 +38,15 @@ layout: default
         <div class="post-line"></div>
         <br />
         <h3 class="post-text">Screenshot</h3>
+        {% for images in page.screenshot%}
+        <div class="text-center">
+          <img
+            src="{{site.baseurl}}{{ images.path }}"
+            class="rounded post-img"
+          />
+        </div>
         <br />
+        {% endfor %}
       </div>
     </div>
   </div>
