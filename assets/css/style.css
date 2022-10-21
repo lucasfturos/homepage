@@ -253,6 +253,20 @@ footer {
 
 /* Card Portfolio */
 
+.detal_port {
+  max-width: 35px;
+  max-height: 35px;
+  display: inline-flex;
+  border-width: 0;
+  font-size: 35px;
+  color: #fff;
+}
+
+.card-data {
+  display: inline-flex;
+  padding-top: -5px;
+}
+
 .port-container {
   padding: 30px;
   align-items: center;
@@ -310,17 +324,7 @@ footer {
 /* Card Mobile */
 
 @media (max-width: 768px) {
-  .card-text,
-  .card-data {
-    font-size: 12px;
-  }
-
-  .btn-card {
-    font-size: 12px;
-  }
-
   .card-port .card-title {
-    font-size: 18px;
     font-weight: bold;
     margin-bottom: 30px;
   }

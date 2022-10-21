@@ -10,16 +10,19 @@ layout: default
         <img
           src="{{site.baseurl}}{{ post.image }}"
           class="card-img-top img-card"
-          alt="..."
+          alt="{{post.title}}"
         />
         <div class="card-body card-body-horizontal">
           <h2 class="card-title">{{ post.title}}</h2>
           <div class="post-line"></div>
           <br />
           <p class="card-text">{{ post.description | truncate: 60 }}</p>
-          <a href="{{site.baseurl}}{{ post.url }}" class="btn btn-dark btn-card"
-            >Ver mais</a
+          <a
+            href="{{site.baseurl}}{{ post.url }}"
+            class="btn btn-dark btn-card"
           >
+            Detalhe
+          </a>
           <time class="card-data">{{ post.date | date: "%b, %-d/%-m/%Y"}}</time>
         </div>
       </div>
