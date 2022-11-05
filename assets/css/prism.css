@@ -14,27 +14,27 @@ pre[class*="language-"] {
   font-size: 1em;
   text-align: left;
   white-space: pre;
-  word-spacing: -10px;
+  word-spacing: -6px;
   word-break: normal;
   word-wrap: normal;
   line-height: 1.5;
-
-  -moz-tab-size: 4;
-  -o-tab-size: 4;
-  tab-size: 4;
+  -moz-tab-size: 5;
+  -o-tab-size: 5;
+  tab-size: 5;
 
   -webkit-hyphens: none;
   -moz-hyphens: none;
   -ms-hyphens: none;
   hyphens: none;
 }
+
 @media (max-width: 768px) {
   pre[class*="language-"] {
     font-size: 12px;
   }
   code[class*="language-"],
   pre[class*="language-"] {
-    word-spacing: -6px;
+    word-spacing: -4px;
   }
 }
 /* Code blocks */
