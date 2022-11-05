@@ -34,7 +34,7 @@ pre[class*="language-"] {
   }
   code[class*="language-"],
   pre[class*="language-"] {
-    word-spacing: -4px;
+    word-spacing: -2px;
   }
 }
 /* Code blocks */
