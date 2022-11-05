@@ -204,12 +204,6 @@ footer {
   transform: translate(-50%, -50%);
 }
 
-.pre-modelo {
-  -webkit-overflow-scrolling: auto;
-  max-height: 30em;
-  overflow: auto;
-}
-
 /* Estilo da data e hora */
 
 #data,
