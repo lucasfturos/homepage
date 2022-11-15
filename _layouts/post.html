@@ -42,14 +42,14 @@ layout: default
         {% for images in page.screenshot %}
         <div class="text-center">
           <img
-            src="{{site.baseurl1}}{{ images.path }}"
+            src="{{site.baseurl}}{{ images.path }}"
             class="rounded post-img" id="post-img"
           />
         </div>
         <div class="modal-img" id="modal-img">
           <span class="close"><ion-icon name="close-outline"></ion-icon></span>
           <img
-            src="{{site.baseurl1}}{{ images.path }}"
+            src="{{site.baseurl}}{{ images.path }}"
             class="rounded post-img modal-content" id="img-content"
             alt=""
           />
