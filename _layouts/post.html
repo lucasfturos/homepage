@@ -39,14 +39,22 @@ layout: default
         <div class="post-line"></div>
         <br />
         <h3 class="post-text">Screenshot</h3>
-        {% for images in page.screenshot%}
+        {% for images in page.screenshot %}
         <div class="text-center">
           <img
-            src="{{site.baseurl}}{{ images.path }}"
-            class="rounded post-img"
+            src="{{site.baseurl1}}{{ images.path }}"
+            class="rounded post-img" id="post-img"
           />
         </div>
-
+        <div class="modal-img" id="modal-img">
+          <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+          <img
+            src="{{site.baseurl1}}{{ images.path }}"
+            class="rounded post-img modal-content" id="img-content"
+            alt=""
+          />
+          <div id="caption"></div>
+        </div>
         <br />
         {% endfor %}
       </div>
@@ -71,12 +79,21 @@ layout: default
         <div class="post-line"></div>
         <br />
         <h3 class="post-text">Imagem</h3>
-        <div class="text-center">
+        <div class="text-center" >
           <img
             src="{{site.baseurl}}{{ page.image }}"
-            class="rounded post-img"
+            class="rounded post-img" id="post-img"
             alt=""
           />
+        </div>
+        <div class="text-center modal-img" id="modal-img">
+          <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+          <img
+            src="{{site.baseurl}}{{ page.image }}"
+            class="rounded post-img modal-content" id="img-content"
+            alt=""
+          />
+          <div id="caption"></div>
         </div>
         <br />
         <div class="post-line"></div>
@@ -98,4 +115,5 @@ layout: default
     </div>
   </div>
   {% endif %}
+  <script src="{{"assets/js/modal_image.js" | relative_url}}"></script>
 </body>
