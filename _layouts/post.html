@@ -26,9 +26,18 @@ layout: default
         <div class="text-center">
           <img
             src="{{site.baseurl}}{{ page.image }}"
-            class="rounded post-img"
+            class="rounded post-img" id="post-img"
             alt=""
           />
+        </div>
+        <div class="modal-img" id="modal-img">
+          <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+          <img
+            src="{{site.baseurl}}{{ page.image }}"
+            class="rounded post-img modal-content" id="img-content"
+            alt=""
+          />
+          <div id="caption"></div>
         </div>
         <br />
         <div class="post-line"></div>
