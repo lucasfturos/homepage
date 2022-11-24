@@ -2,30 +2,32 @@
 layout: default
 ---
 
-<div class="main1">
-    
-    <div class="container container-draw">
-        <div class="sidebar-draw">
-            <ul>
-                <li>
-                    <label for="color">Color:</label>
-                    <input type="color" id="color-draw" value="#ffffff">
-                </li>
-                <li>
-                    <label for="size">Size:</label>
-                    <input type="nummber" id="weight-draw" min="2" max="200" value="10">
-                </li>
-                <li>
-                    <label for="reset">Reset:</label>
-                    <input type="reset" onClick="window.location.reload();">
-                </li>
-                <li>
-                    <img src=".." id="clear-draw">
-                </li>
+<!-- P5.js - https://p5js.org/ -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/p5.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.5.0/addons/p5.sound.min.js"></script>
 
-            </ul>
-        </div>
+<div class="main1">
+  <div class="container container-draw">
+    <div class="sidebar-draw">
+      <ul>
+        <li>
+          <label for="color">Color:</label>
+          <input type="color" id="color-draw" value="#ffffff" />
+        </li>
+        <li>
+          <label for="size">Size:</label>
+          <input type="nummber" id="weight-draw" min="2" max="200" value="10" />
+        </li>
+        <li>
+          <label for="reset">Reset:</label>
+          <input type="reset" onClick="window.location.reload();" />
+        </li>
+        <li>
+          <img src=".." id="clear-draw" />
+        </li>
+      </ul>
     </div>
-    <!-- Javascript da aplicação -->
-    <script src="{{"assets/js/draw.js" | relative_url}}"></script>
+  </div>
+  <!-- Javascript da aplicação -->
+  <script src="{{"assets/js/draw.js" | relative_url}}"></script>
 </div>
