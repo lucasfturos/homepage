@@ -1,5 +1,5 @@
 ---
 title: Esfera
-layout: esfera
+layout: page/esfera
 permalink: "/esfera.html"
 ---

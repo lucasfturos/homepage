@@ -1,5 +1,5 @@
 ---
 title: Desenhe
-layout: draw
+layout: page/draw
 permalink: "/draw.html"
 ---

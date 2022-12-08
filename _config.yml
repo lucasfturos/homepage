@@ -12,4 +12,5 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-include-cache
-
+include:
+  - _pages

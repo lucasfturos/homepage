@@ -1,5 +1,5 @@
 ---
 title: Toróide
-layout: torus
+layout: page/torus
 permalink: "/torus.html"
 ---
