@@ -17,7 +17,7 @@ image: "/assets/img/blog/Artigo/pendulo_duplo.png"
 
 <div class="text-center" >
   <img
-    src="{{site.baseurl}}{{ post.image }}"
+    src="{{site.baseurl}}{{ page.image }}"
     class="rounded post-img" id="post-img"
     alt=""
   />
@@ -25,7 +25,7 @@ image: "/assets/img/blog/Artigo/pendulo_duplo.png"
 <div class="modal-img" id="modal-img">
   <span class="close"><ion-icon name="close-outline"></ion-icon></span>
   <img
-    src="{{site.baseurl}}{{ post.image }}"
+    src="{{site.baseurl}}{{ page.image }}"
     class="rounded post-img modal-content" id="img-content"
     alt=""
   />
