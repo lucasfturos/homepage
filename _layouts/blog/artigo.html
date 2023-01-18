@@ -16,7 +16,7 @@ layout: default
           <h2 class="card-title">{{ post.title}}</h2>
           <div class="post-line"></div>
           <br />
-          <p class="card-text">{{ post.introduction | truncate: 60 }}</p>
+          <p class="card-text">{{ post.description | truncate: 60 }}</p>
           <a
             href="{{site.baseurl}}{{ post.url }}"
             class="btn btn-dark btn-card"
