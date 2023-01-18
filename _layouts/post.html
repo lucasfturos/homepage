@@ -20,52 +20,8 @@ layout: default
           </div>
           <br />
         </div>
-        <div class="post-line"></div>
         <br />
-        <h3 class="post-text">Tela Inicial</h3>
-        <div class="text-center">
-          <img
-            src="{{site.baseurl}}{{ page.image }}"
-            class="rounded post-img" id="post-img"
-            alt=""
-          />
-        </div>
-        <div class="modal-img" id="modal-img">
-          <span class="close"><ion-icon name="close-outline"></ion-icon></span>
-          <img
-            src="{{site.baseurl}}{{ page.image }}"
-            class="rounded post-img modal-content" id="img-content"
-            alt=""
-          />
-          <div id="caption"></div>
-        </div>
-        <br />
-        <div class="post-line"></div>
-        <br />
-        <h3 class="post-text">Sobre</h3>
-        <p class="post-text">{{ page.description }}</p>
-        <br />
-        <div class="post-line"></div>
-        <br />
-        <h3 class="post-text">Screenshot</h3>
-        {% for images in page.screenshot %}
-        <div class="text-center">
-          <img
-            src="{{site.baseurl}}{{ images.path }}"
-            class="rounded post-img" id="post-img"
-          />
-        </div>
-        <div class="modal-img" id="modal-img">
-          <span class="close"><ion-icon name="close-outline"></ion-icon></span>
-          <img
-            src="{{site.baseurl}}{{ images.path }}"
-            class="rounded post-img modal-content" id="img-content"
-            alt=""
-          />
-          <div id="caption"></div>
-        </div>
-        <br />
-        {% endfor %}
+        {{ content | markdownify }}
       </div>
     </div>
   </div>
@@ -76,53 +32,20 @@ layout: default
         <div class="row">
           <div class="col">
             <h2 class="post-title">{{ page.title}}</h2>
-            <br />
           </div>
           <div class="col text-end">
             <time class="post-data"
               >{{ page.date | date: "%B, %-d/%-m/%Y"}}</time
             >
           </div>
-          <br />
-        </div>
-        <div class="post-line"></div>
-        <br />
-        <h3 class="post-text">Imagem</h3>
-        <div class="text-center" >
-          <img
-            src="{{site.baseurl}}{{ page.image }}"
-            class="rounded post-img" id="post-img"
-            alt=""
-          />
-        </div>
-        <div class="modal-img" id="modal-img">
-          <span class="close"><ion-icon name="close-outline"></ion-icon></span>
-          <img
-            src="{{site.baseurl}}{{ page.image }}"
-            class="rounded post-img modal-content" id="img-content"
-            alt=""
-          />
-          <div id="caption"></div>
         </div>
         <br />
-        <div class="post-line"></div>
-        <br />
-        <h3 class="post-text">Introdução</h3>
-        <p class="post-text">{{ page.introduction }}</p>
-        <br />
-        <div class="post-line"></div>
-        <br />
-        <h3 class="post-text">Corpo do texto</h3>
-        <p class="post-text">{{ page.body }}</p>
-        <br />
-        <div class="post-line"></div>
-        <br />
-        <h3 class="post-text">Conclusão</h3>
-        <p class="post-text">{{ page.conclusion }}</p>
+        {{ content | markdownify }}
         <br />
       </div>
     </div>
   </div>
   {% endif %}
+  <br />
   <script src="{{"assets/js/modal_image.js" | relative_url}}"></script>
 </body>
