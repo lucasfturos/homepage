@@ -14,7 +14,6 @@ image: "/assets/img/blog/Artigo/pendulo_duplo.png"
 {:.post-text}
 ## Imagem
 
-
 <div class="text-center" >
   <img
     src="{{site.baseurl}}{{ page.image }}"
@@ -24,14 +23,9 @@ image: "/assets/img/blog/Artigo/pendulo_duplo.png"
 </div>
 <div class="modal-img" id="modal-img">
   <span class="close"><ion-icon name="close-outline"></ion-icon></span>
-  <img
-    src="{{site.baseurl}}{{ page.image }}"
-    class="rounded post-img modal-content" id="img-content"
-    alt=""
-  />
+  <img class="rounded post-img modal-content" id="img-content" />
 </div>
 <div id="caption"></div>
-
 <div class="post-line"></div>
 <br />
 
