@@ -106,18 +106,8 @@ footer {
   display: inline-flex;
 }
 
-.github {
-  max-width: 35px;
-  max-height: 35px;
-  width: auto;
-  height: auto;
-  display: inline-flex;
-  font-size: 35px;
-  border-width: 0;
-  color: #fff;
-  margin-top: 10px;
-}
-
+.github,
+.instagram, 
 .linkedin {
   max-width: 35px;
   max-height: 35px;
@@ -127,19 +117,6 @@ footer {
   font-size: 35px;
   color: #fff;
   border-width: 0;
-  margin-left: 15px;
-  margin-top: 10px;
-}
-
-.instagram {
-  max-width: 35px;
-  max-height: 35px;
-  width: auto;
-  height: auto;
-  display: inline-flex;
-  border-width: 0;
-  font-size: 35px;
-  color: #fff;
   margin-left: 15px;
   margin-top: 10px;
 }
