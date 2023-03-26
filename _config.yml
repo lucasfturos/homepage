@@ -14,3 +14,4 @@ plugins:
   - jekyll-include-cache
 include:
   - _pages
+  - _assets
