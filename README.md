@@ -11,3 +11,4 @@ Testes dos recursos do GitHub Pages
 - **Uma área de blog com postagem de:**
   - Portfólio;
   - Artigos.
+- **Uma área de desenho (Draw) feito em JavaScript e P5.js**
