@@ -6,6 +6,8 @@ layout: default
 <body class="main1">
   {% if page.categorie == "Portfolio" %}
   <div class="container">
+    <br>
+   
     <div class="card post-card">
       <div class="card-body">
         <div class="row">
@@ -13,10 +15,17 @@ layout: default
             <h2 class="post-title">{{ page.title}}</h2>
             <br />
           </div>
-          <div class="col text-end">
+          <div class="col-md-auto text-end">
             <time class="post-data"
               >{{ page.date | date: "%d %b. %Y"}}</time
             >
+          </div>
+          <div class="col col-1">
+             <a type="button" 
+                class="btn btn-dark text-white btn-back-post" 
+                href="{{ site.baseurl }}/portfolio">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+              </a>
           </div>
           <br />
         </div>
@@ -33,10 +42,17 @@ layout: default
           <div class="col">
             <h2 class="post-title">{{ page.title}}</h2>
           </div>
-          <div class="col text-end">
+          <div class="col-md-auto text-end">
             <time class="post-data"
               >{{ page.date | date: "%B, %-d/%Y"}}</time
             >
+          </div>
+          <div class="col col-1">
+             <a type="button" 
+                class="btn btn-dark text-white btn-back-post" 
+                href="{{ site.baseurl }}/artigo">
+                  <ion-icon name="chevron-back-outline"></ion-icon>
+              </a>
           </div>
         </div>
         <br />

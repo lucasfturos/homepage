@@ -20,10 +20,10 @@ screenshot: '/_assets/img/blog/Portfolio/PenduloDuploSFML/pendulo_funcionando.gi
 
 <div align="center">
     <a type="button" 
-        class="btn btn-dark text-white"
-        href="https://github.com/lucasfturos/Projects_C-CPP/tree/main/PenduloDuplo_SFML" 
-        target="_blank" 
-        >
+       class="btn btn-dark text-white"
+       href="https://github.com/lucasfturos/Projects_C-CPP/tree/main/PenduloDuplo_SFML" 
+       target="_blank" 
+    >
         <ion-icon name="logo-github"></ion-icon>
         Código fonte
     </a>
