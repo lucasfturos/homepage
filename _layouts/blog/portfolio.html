@@ -8,7 +8,7 @@ layout: default
       {% for post in site.posts %} {% if post.categorie == "Portfolio" %}
       <div class="card card-port">
         <img
-          src="{{site.baseurl}}{{ post.image }}"
+          src="{{ post.image }}"
           class="card-img-top img-card"
           alt="{{post.title}}"
         />
@@ -18,7 +18,7 @@ layout: default
           <br />
           <p class="card-text">{{ post.description | truncate: 60 }}</p>
           <a
-            href="{{site.baseurl}}{{ post.url }}"
+            href="{{ post.url }}"
             class="btn btn-dark btn-card"
           >
             Detalhe

@@ -4,8 +4,8 @@ title: Pêndulo Duplo em SFML e C++
 date: 4-4-2023 16:36
 categorie: Portfolio
 description: Este programa é uma simulação de um pêndulo duplo, seu plot foi feito utilizando a biblioteca do SFML. Eu desenvolvi ele em C++ e seus testes foram realizados no sistema Linux. Para ver o código fonte, acesse pelo botão logo abaixo.
-image: '/_assets/img/blog/Portfolio/PenduloDuploSFML/tela_do_pendulo.png'
-screenshot: '/_assets/img/blog/Portfolio/PenduloDuploSFML/pendulo_funcionando.gif'
+image: https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/Portfolio/PenduloDuploSFML/tela_do_pendulo.png?raw=true 
+screenshot: https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/Portfolio/PenduloDuploSFML/pendulo_funcionando.gif?raw=true
 ---
 
 <div class="post-line"></div>
@@ -40,7 +40,7 @@ screenshot: '/_assets/img/blog/Portfolio/PenduloDuploSFML/pendulo_funcionando.gi
 <br>
 <div class="text-center">
   <img
-    src="{{site.baseurl}}{{ page.screenshot }}"
+    src="{{ page.screenshot }}"
     class="rounded post-img" id="post-img"
     alt=""
   />

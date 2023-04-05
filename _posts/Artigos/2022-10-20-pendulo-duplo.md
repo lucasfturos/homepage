@@ -4,21 +4,21 @@ title: Pêndulo Duplo
 categorie: Artigo
 description: Pêndulo duplo é um sistema caótico, onde dois pêndulos simples são conectados atravês de suas massas (esferas nas pontas). O pêndulo duplo apresenta um movimento mais complexo que o pêndulo simples.
 date: 20-10-2022 14:43
-image: "/_assets/img/blog/Artigo/pendulo_duplo.png"
+image: 'https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/Artigo/pendulo_duplo.png?raw=true'
 ---
-
 
 <div class="post-line"></div>
 <br />
 
 {:.post-text}
+
 ## Imagem
 
 <div class="text-center" >
   <img
-    src="{{site.baseurl}}{{ page.image }}"
+    src="{{ page.image }}"
     class="rounded post-img" id="post-img"
-    alt=""
+    alt="{{ page.image }}"
   />
 </div>
 <div class="modal-img" id="modal-img">
@@ -29,32 +29,31 @@ image: "/_assets/img/blog/Artigo/pendulo_duplo.png"
 <div class="post-line"></div>
 <br />
 
-{:.post-text} 
+{:.post-text}
+
 ## Introdução
 
-
-{:.post-text} 
+{:.post-text}
 Pêndulo duplo é um sistema caótico, onde dois pêndulos simples são conectados atravês de suas massas (esferas nas pontas). O pêndulo duplo apresenta um movimento mais complexo que o pêndulo simples. Alguns modelos matemáticos são usados para estudar este sistema, como, a dinâmica Lagrangeana ou hamiltoniana. O pêndulo duplo desta foto foi desenvolvido em C++.
-
 
 <div class="post-line"></div>
 <br />
 
 {:.post-text}
+
 ## Corpo do texto
 
 {:.post-text}
 Teste
 
-
 <div class="post-line"></div>
 <br />
 
 {:.post-text}
+
 ## Conclusão
 
 {:.post-text}
 Teste
 
 <div class="post-line"></div>
-

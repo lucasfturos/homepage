@@ -8,7 +8,7 @@ layout: default
       {% for post in site.posts %} {% if post.categorie == "Artigo" %}
       <div class="card card-port">
         <img
-          src="{{site.baseurl}}{{ post.image }}"
+          src="{{ post.image }}"
           class="card-img-top img-card"
           alt="{{post.title}}"
         />
