@@ -1,6 +1,6 @@
 author: Lucas Felipe Turos
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "https://lucasfturos.github.io/myhomepage" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/"
+url: "https://lucasfturos.github.io/myhomepage"
 domain: "lucasfturos.github.io"
 encoding: UTF-8
 linkedin: https://www.linkedin.com/in/lucas-felipe-turos/
