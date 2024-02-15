@@ -1,17 +1,17 @@
-window.addEventListener('load', () => {
-    const modal = document.getElementById('modal-img');
-    const img = document.getElementById('post-img');
-    const modalImg = document.getElementById('img-content');
-    const captionText = document.getElementById('caption');
+window.onload = function () {
+    var modal = document.getElementById("modal-img");
+    var img = document.getElementById("post-img");
+    var modalImg = document.getElementById("img-content");
+    var captionText = document.getElementById("caption");
 
-    img.addEventListener('click', () => {
-        modal.style.display = 'block';
-        modalImg.src = img.src;
-        captionText.innerHTML = img.alt;
-    });
+    img.onclick = function () {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+    };
 
-    const span = document.querySelector('.close');
-    span.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
-});
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function () {
+        modal.style.display = "none";
+    };
+};
