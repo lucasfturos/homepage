@@ -1,30 +1,26 @@
 ,
 <header>
   <nav
-    class="navbar navbar-dark dark_menu navbar-expand-lg dark_menu fixed-top"
-  >
+    class="navbar navbar-dark dark_menu navbar-expand-lg dark_menu fixed-top">
     <div class="container-fluid">
       <button
         class="navbar-toggler"
         type="button"
         data-bs-toggle="offcanvas"
-        data-bs-target="#navbarOffcanvasLg"
-      >
+        data-bs-target="#navbarOffcanvasLg">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div
         class="offcanvas dark_menu_mobile offcanvas-start"
         tabindex="-1"
         id="navbarOffcanvasLg"
-        aria-labelledby="navbarOffcanvasLgLabel"
-      >
+        aria-labelledby="navbarOffcanvasLgLabel">
         <div class="offcanvas-header">
           <button
             type="button"
             class="btn-close offcanvas-title"
             data-bs-dismiss="offcanvas"
-            aria-label="Close"
-          ></button>
+            aria-label="Close"></button>
         </div>
         <div class="offcanvas-body">
           <ul class="navbar-nav justify-content-start flex-grow-1 pe-3">
@@ -32,8 +28,7 @@
               <a
                 class="nav-link active"
                 aria-current="page"
-                href="{{ site.baseurl }}/"
-                >Início
+                href="{{ site.baseurl }}/">Início
               </a>
             </li>
             <ul class="navbar-nav">
@@ -43,22 +38,19 @@
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  >Blog
+                  aria-expanded="false">Blog
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark dark_dropdown">
                   <li>
                     <a
                       class="dropdown-item"
-                      href="{{ site.baseurl }}/artigo.html"
-                      >Artigo
+                      href="{{ site.baseurl }}/artigo.html">Artigo
                     </a>
                   </li>
                   <li class="nav-item">
                     <a
                       class="dropdown-item"
-                      href="{{ site.baseurl }}/portfolio.html"
-                      >Portfólio
+                      href="{{ site.baseurl }}/portfolio.html">Portfólio
                     </a>
                   </li>
                 </ul>
@@ -67,21 +59,18 @@
             <li class="nav-item">
               <a
                 class="nav-link active"
-                href="{{ site.baseurl }}/curriculo.html"
-              >
+                href="{{ site.baseurl }}/curriculo.html">
                 Currículo
               </a>
             </li>
             <li class="nav-item">
               <a
                 class="nav-link active"
-                href="{{ site.baseurl }}/data_hora.html"
-                >Data/Hora
+                href="{{ site.baseurl }}/data_hora.html">Data/Hora
               </a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="{{ site.baseurl }}/draw.html"
-                >Draw
+              <a class="nav-link active" href="{{ site.baseurl }}/draw.html">Draw
               </a>
             </li>
             <ul class="navbar-nav">
@@ -91,33 +80,34 @@
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                  >Modelos3D
+                  aria-expanded="false">Modelos3D
                 </a>
                 <ul class="dropdown-menu dropdown-menu-dark dark_dropdown">
                   <li>
                     <a
                       class="dropdown-item"
-                      href="{{ site.baseurl }}/esfera.html"
-                    >
+                      href="{{ site.baseurl }}/esfera.html">
                       Esfera
                     </a>
                   </li>
                   <li>
                     <a
                       class="dropdown-item"
-                      href="{{ site.baseurl }}/torus.html"
-                    >
+                      href="{{ site.baseurl }}/torus.html">
                       Toróide
                     </a>
                   </li>
                 </ul>
+              <li class="nav-item">
+                <a class="nav-link active" href="/WebGL">WebGL
+                </a>
+              </li>
               </li>
             </ul>
           </ul>
+
           <div
-            class="container-fluid d-flex justify-content-end flex-grow-3 pe-3"
-          >
+            class="container-fluid d-flex justify-content-end flex-grow-3 pe-3">
             <a href="{{ site.github }}" target="_blank">
               <div class="github"><ion-icon name="logo-github"></ion-icon></div>
             </a>
