@@ -13,7 +13,25 @@ screenshot: https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/P
 
 {:.post-text}
 
+## Tela do programa
+
+<br>
+<div class="text-center">
+  <img
+    src="{{ page.screenshot }}"
+    class="rounded post-img modal-trigger"
+    alt=""
+  />
+</div>
+<br />
+
+{:.post-text}
+
+<div class="post-line"></div>
+<br />
+
 ## Sobre
+<br />
 
 {:.post-text}
 {{page.description}}
@@ -28,24 +46,8 @@ screenshot: https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/P
         Código fonte
     </a>
 </div>
-
-<br />
-<div class="post-line"></div>
-<br />
-
-{:.post-text}
-
-## Tela do programa
-
 <br>
-<div class="text-center">
-  <img
-    src="{{ page.screenshot }}"
-    class="rounded post-img" id="post-img"
-    alt=""
-  />
-</div>
-<br>
+
 <div class="modal-img" id="modal-img">
   <span class="close"><ion-icon name="close-outline"></ion-icon></span>
   <img class="rounded post-img modal-content" id="img-content" />
