@@ -44,7 +44,7 @@ screenshot:
 <div align="center">
     <a type="button" 
        class="btn btn-dark text-white"
-       href="https://github.com/lucasfturos/Projects_C-CPP/tree/main/SFML_Codes/PenduloDuplo_SFML" 
+       href="https://github.com/lucasfturos/MusicSpectrum" 
        target="_blank" 
     >
         <ion-icon name="logo-github"></ion-icon>
