@@ -17,7 +17,7 @@ image: 'https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/Artig
 <div class="text-center" >
   <img
     src="{{ page.image }}"
-    class="rounded post-img" id="post-img"
+    class="rounded post-img modal-trigger"
     alt="{{ page.image }}"
   />
 </div>

@@ -65,7 +65,7 @@ screenshot:
 <div class="text-center">
   <img
     src="{{ images.path }}"
-    class="rounded post-img modal-trigger" id="post-img"
+    class="rounded post-img modal-trigger"
   />
 </div>
 <br />
