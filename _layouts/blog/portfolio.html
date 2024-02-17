@@ -19,9 +19,8 @@ layout: default
           <p class="card-text">{{ post.description | truncate: 60 }}</p>
           <a
             href="{{ site.baseurl }}{{ post.url }}"
-            class="btn btn-dark btn-card"
+            class="stretched-link"
           >
-            Detalhe
           </a>
           <time class="card-data">{{ post.date | date: "%B %d, %Y"}}</time>
         </div>
