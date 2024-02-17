@@ -17,8 +17,10 @@ screenshot:
 <div class="post-line"></div>
 <br />
 
+{:.post-text}
 ## Tela Inicial
 
+<br />
 <div class="text-center">
   <img
     src="{{ page.screenshot[0].path }}"
@@ -31,8 +33,8 @@ screenshot:
 <br />
 
 {:.post-text}
-
 ## Sobre
+<br />
 
 {:.post-text}
 <p>Visualizador de espectro de audio. Aplicação da transformada de Fourier FFT em conjunto com a fórmula de Euler.</p>
@@ -59,6 +61,7 @@ screenshot:
 {:.post-text}
 
 ## Screenshot
+<br />
 
 {% for images in page.screenshot %}
 
