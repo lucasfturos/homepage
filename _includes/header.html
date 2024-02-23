@@ -64,18 +64,7 @@
                 Currículo
               </a>
             </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="{{ site.baseurl }}/data_hora.html">Data/Hora
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link active"
-                href="{{ site.baseurl }}/draw.html">Draw
-              </a>
-            </li>
+
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <a
@@ -83,7 +72,40 @@
                   href="#"
                   role="button"
                   data-bs-toggle="dropdown"
-                  aria-expanded="false">Modelos3D
+                  aria-expanded="false">Ferramentas
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-dark dark_dropdown">
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="{{ site.baseurl }}/calculadora.html">Calculadora
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="{{ site.baseurl }}/data_hora.html">Data e Hora
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="{{ site.baseurl }}/draw.html">Draw
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+            <ul class="navbar-nav">
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link active dropdown-toggle"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false">Modelos 3D
                 </a>
                 <ul
                   class="dropdown-menu dropdown-menu-dark dark_dropdown">
@@ -104,6 +126,7 @@
                 </ul>
               </li>
             </ul>
+
             <ul class="navbar-nav">
               <li class="nav-item dropdown">
                 <a
