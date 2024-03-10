@@ -637,6 +637,14 @@ footer {
         padding: 10px;
     }
 
+    .visor {
+        width: 80%;
+    }
+
+    .calculator {
+        width: 80%;
+    }
+
     .btn-calculator,
     .btn-merge-left,
     .btn-merge-right {
@@ -646,6 +654,14 @@ footer {
 }
 
 @media (max-width: 360px) {
+    .visor {
+        width: 90%;
+    }
+
+    .calculator {
+        width: 90%;
+    }
+    
     .btn-calculator,
     .btn-merge-left,
     .btn-merge-right {
