@@ -121,16 +121,14 @@ btnPower.addEventListener("click", () => {
     inputVisor.value += "^";
 });
 
-let parenState = 0;
-const btnParens = document.getElementById("btnParens");
-btnParens.addEventListener("click", () => {
-    if (parenState === 0) {
-        inputVisor.value += "(";
-        parenState = 1;
-    } else {
-        inputVisor.value += ")";
-        parenState = 0;
-    }
+const btnParenLeft = document.getElementById("btnParenLeft");
+btnParenLeft.addEventListener("click", () => {
+    inputVisor.value += "(";
+});
+
+const btnParenRight = document.getElementById("btnParenRight");
+btnParenRight.addEventListener("click", () => {
+    inputVisor.value += ")";
 });
 
 const btnSquareRoot = document.getElementById("btnSquareRoot");
@@ -198,7 +196,8 @@ export {
     btnDelete,
     btnAllClear,
     btnPower,
-    btnParens,
+    btnParenLeft,
+    btnParenRight,
     btnMulti,
     btnDiv,
     btnAdd,
