@@ -1,4 +1,4 @@
-async function renderMarkdownFromUrl(url) {
+const renderMarkdownFromUrl = async (url) => {
     try {
         console.log("Fetching Markdown file...");
         const response = await fetch(url);
@@ -7,6 +7,10 @@ async function renderMarkdownFromUrl(url) {
         }
         console.log("Markdown file fetched successfully.");
         let markdown = await response.text();
+
+        const presentationMarker =
+            '## <img src="https://readme-typing-svg.demolab.com?font=Roboto&size=24&pause=1000&color=C9D1D9&multiline=true&width=460&lines=Hi%2C+I\'m+Lucas+Turos.+Welcome+to+my+profile." alt="Hi, I\'m Lucas Turos. Welcome to my profile." />';
+        markdown = markdown.replace(presentationMarker, "");
 
         const startMarker = "## The technologies I use the most are";
         const endMarker = "## About me";
@@ -46,7 +50,7 @@ async function renderMarkdownFromUrl(url) {
     } catch (error) {
         console.error("Erro ao buscar o arquivo Markdown:", error);
     }
-}
+};
 
 const markdownUrl =
     "https://raw.githubusercontent.com/lucasfturos/lucasfturos/main/README.md";
