@@ -61,11 +61,15 @@ As equações de movimento para um pêndulo duplo são derivadas a partir das le
 
 {:.post-text}
 
+<div class="row flex-nowrap overflow-auto">
 $$ (m_1 + m_2) l_1 \ddot{\theta_1} + m_2 l_2 \ddot{\theta_2} \cos(\theta_1 - \theta_2) + m_2 l_2 (\dot{\theta_2})^2 \sin(\theta_1 - \theta_2) + (m_1 + m_2) g \sin(\theta_1) = 0 $$
+</div>
 
 {:.post-text}
 
-$$ l_2 \ddot{\theta}\_2 + l_1 \ddot{\theta}\_1 \cos(\theta_1 - \theta_2) - l_1 (\dot{\theta}\_1)^2 \sin(\theta_1 - \theta_2) + g \sin(\theta_2) = 0 $$
+<div class="row flex-nowrap overflow-auto">
+$$ l_2 \ddot{\theta_2} + l_1 \ddot{\theta_1} \cos(\theta_1 - \theta_2) - l_1 (\dot{\theta_1})^2 \sin(\theta_1 - \theta_2) + g \sin(\theta_2) = 0 $$
+</div>
 
 {:.post-text}
 
