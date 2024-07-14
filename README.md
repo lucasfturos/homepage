@@ -2,13 +2,20 @@
 
 Testes dos recursos do GitHub Pages
 
-## Por enquanto o site tem:
-- **Uma apresentação;**
-- **Um currículo;**
-- **Data e hora do local**
-- **Dois modelos 3D (uma esfera e uma toróide) feitos em JavaScript**
-  - O código dos modelos são mostrados em um botão "Show/Hide Code" para quem quiser copiar o código e testar nas suas aplicações WEB.
-- **Uma área de blog com postagem de:**
-  - Portfólio;
-  - Artigos.
-- **Uma área de desenho (Draw) feito em JavaScript e P5.js**
+## O site tem:
+
+-   **Uma apresentação**
+-   **Um currículo**
+-   **Modelos 3D usando Javascript e Canvas**
+    -   Esfera
+    -   Toroide
+-   **Blog com as seguintes postagens**
+    -   Portfólio;
+    -   Artigos.
+-   **Ferramentas**
+    -   Calculadora
+    -   Data e hora
+    -   Área de desenho (Draw)
+-   **Sites**
+    -   Audio Visualizer (Visualizador do Espectro de Áudio)
+    -   WebGL (Tem modelos 3D e um visualizador de arquivos Wavefront .obj)
