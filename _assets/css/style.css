@@ -40,7 +40,7 @@ html,
 .main {
     width: 100%;
     height: 100%;
-    background: -webkit-linear-gradient(linear, #000000, #001338, #4b566b);
+    background: linear-gradient(linear, #000000, #001338, #4b566b);
     background: -webkit-gradient(
         linear,
         center top,
@@ -54,7 +54,7 @@ html,
 
 .main1 {
     margin-top: -20px;
-    background: -webkit-linear-gradient(linear, #000000, #001338, #4b566b);
+    background: linear-gradient(linear, #000000, #001338, #4b566b);
     background: -webkit-gradient(
         linear,
         center top,
@@ -340,21 +340,115 @@ footer {
     }
 }
 
-/* 404 */
+/* Estilo da página 404 */
 
-.text-404 {
-    font-size: medium;
-    color: gray;
-}
-
-.title-404 {
-    font-size: 80px;
+.space-background {
+    height: 100%;
+    overflow: hidden;
+    background: radial-gradient(circle, #020024, #323246, #000);
     color: #fff;
 }
 
-.description-404 {
-    font-size: small;
+.content-404 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.title-404 {
+    font-size: 120px;
+    margin: 0;
+    color: #fff;
+}
+
+.text-404 {
+    font-size: 24px;
     color: gray;
+}
+
+.description-404 {
+    font-size: 18px;
+    color: gray;
+}
+
+.link-404 {
+    color: #fff;
+    text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+    .title-404 {
+        font-size: 80px;
+    }
+    .text-404 {
+        font-size: 18px;
+    }
+    .description-404 {
+        font-size: 16px;
+    }
+}
+
+.stars,
+.stars2,
+.stars3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: transparent;
+    background-size: cover;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+/* Credits https://gist.github.com/SH20RAJ/48a8733e755b59c16ae32b5d00614564 */
+
+.stars {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars.png")
+        repeat top center;
+    animation: moveStars 50s linear infinite;
+}
+
+.stars2 {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars2.png")
+        repeat top center;
+    animation: moveStars2 100s linear infinite;
+}
+
+.stars3 {
+    background: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1231630/stars3.png")
+        repeat top center;
+    animation: moveStars3 150s linear infinite;
+}
+
+@keyframes moveStars {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -10000px 5000px;
+    }
+}
+
+@keyframes moveStars2 {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 10000px -5000px;
+    }
+}
+
+@keyframes moveStars3 {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: -5000px 10000px;
+    }
 }
 
 /* Estilo da postagem */
