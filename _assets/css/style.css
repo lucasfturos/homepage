@@ -212,7 +212,8 @@ footer {
     line-height: 85px;
     letter-spacing: 1px;
     background: linear-gradient(135deg, #14ffe9, #ffeb3b, #ff00e0);
-    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
     animation: animate 1.5s linear infinite;
 }
 
