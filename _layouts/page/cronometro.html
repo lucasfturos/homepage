@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<script type="module" src="{{"_assets/js/chronometer.js" | relative_url}}"></script>
+
+<br />
+<div class="main1">
+    <br /><br />
+    <div
+        class="container chronometer-container justify-content-center align-items-center"
+    >
+        <h1 id="chronometer">00:00<span class="milliseconds">.00</span></h1>
+        <div class="chronometer-btn-group">
+            <button class="btn btn-warning btn-chronometer" id="btn-refresh">
+                <ion-icon class="chronometer-icon" name="refresh"></ion-icon>
+            </button>
+            <button class="btn btn-success btn-chronometer" id="btn-start">
+                <ion-icon class="chronometer-icon" name="play"></ion-icon>
+            </button>
+            <button class="btn btn-info btn-chronometer" id="btn-lap">
+                <ion-icon class="chronometer-icon" name="flag"></ion-icon>
+            </button>
+            <button class="btn btn-danger btn-chronometer" id="btn-stop">
+                <ion-icon class="chronometer-icon" name="pause"></ion-icon>
+            </button>
+        </div>
+        <br />
+        <div id="chrnometer-table-container">
+            <table class="table chronometer-table">
+                <thead>
+                    <tr>
+                        <th scope="col">Volta</th>
+                        <th scope="col">Tempo</th>
+                        <th scope="col">Tempo Total</th>
+                    </tr>
+                </thead>
+                <tbody id="laps-body"></tbody>
+            </table>
+        </div>
+    </div>
+</div>

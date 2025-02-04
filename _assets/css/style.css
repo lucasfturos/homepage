@@ -784,3 +784,72 @@ footer {
         border-radius: 5px 5px 45% 45%;
     }
 }
+
+/* Chronometer */
+
+.chronometer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+#chronometer {
+    font-style: italic;
+    font-family: "Orbitron";
+    font-size: 80px;
+}
+
+.milliseconds {
+    font-style: italic;
+    font-family: "Orbitron";
+    font-size: 50%;
+    vertical-align: baseline;
+    opacity: 0.8;
+    display: inline-block;
+    width: 40px;
+    text-align: left;
+}
+
+.chronometer-btn-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.btn-chronometer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+#btn-lap,
+#btn-stop {
+    display: none;
+}
+
+.chronometer-icon {
+    font-size: 24px;
+    color: white;
+}
+
+#chrnometer-table-container {
+    display: none;
+    width: 50%;
+    margin-top: 20px;
+}
+
+.chronometer-table {
+    width: 100%;
+    color: #b8b8b8;
+    text-align: center;
+    border-collapse: collapse;
+}
+
+.chronometer-table tbody tr td {
+    font-family: "Orbitron";
+}
