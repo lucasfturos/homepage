@@ -860,6 +860,7 @@ footer {
 
 .chronometer-table tbody tr td {
     font-family: "Orbitron";
+    font-style: italic;
 }
 
 @media (max-width: 500px) {

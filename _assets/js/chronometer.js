@@ -83,7 +83,11 @@ const addLap = () => {
         .padStart(2, "0")}.${totalMilliseconds.toString().padStart(2, "0")}`;
 
     let row = document.createElement("tr");
-    row.innerHTML = `<td>${lapCount}</td><td>${formattedTime}</td><td>${totalFormattedTime}</td>`;
+    row.innerHTML = `
+        <td>${lapCount}</td>
+        <td>${formattedTime}</td>
+        <td>${totalFormattedTime}</td>
+    `;
 
     lapsBody.insertBefore(row, lapsBody.firstChild);
 
