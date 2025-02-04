@@ -815,6 +815,8 @@ footer {
     display: flex;
     gap: 10px;
     margin-top: 10px;
+    justify-content: center;
+    align-items: center;
 }
 
 .btn-chronometer {
@@ -825,6 +827,8 @@ footer {
     height: 55px;
     border-radius: 50%;
     cursor: pointer;
+    position: relative;
+    padding: 0;
 }
 
 #btn-lap,
@@ -835,6 +839,10 @@ footer {
 .chronometer-icon {
     font-size: 24px;
     color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 #chrnometer-table-container {
@@ -852,4 +860,71 @@ footer {
 
 .chronometer-table tbody tr td {
     font-family: "Orbitron";
+}
+
+@media (max-width: 500px) {
+    #chronometer {
+        font-size: 60px;
+    }
+
+    .milliseconds {
+        font-size: 50%;
+    }
+
+    .chronometer-btn-group {
+        flex-direction: row;
+        gap: 8px;
+    }
+
+    .btn-chronometer {
+        width: 45px;
+        height: 45px;
+    }
+
+    .chronometer-icon {
+        font-size: 20px;
+    }
+
+    #chrnometer-table-container {
+        width: 80%;
+    }
+
+    .chronometer-table {
+        font-size: 12px;
+    }
+
+    .chronometer-table tbody tr td {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 360px) {
+    #chronometer {
+        font-size: 50px;
+    }
+
+    .milliseconds {
+        font-size: 40%;
+    }
+
+    .btn-chronometer {
+        width: 40px;
+        height: 40px;
+    }
+
+    .chronometer-icon {
+        font-size: 18px;
+    }
+
+    #chrnometer-table-container {
+        width: 90%;
+    }
+
+    .chronometer-table {
+        font-size: 10px;
+    }
+
+    .chronometer-table tbody tr td {
+        padding: 8px;
+    }
 }
