@@ -836,6 +836,10 @@ footer {
     display: none;
 }
 
+#btn-start .chronometer-icon {
+    margin-left: 1px;
+}
+
 .chronometer-icon {
     font-size: 24px;
     color: white;
