@@ -1,0 +1,60 @@
+---
+layout: default
+---
+
+<!-- Credits: https://filipedeschamps.github.io/doom-fire-algorithm/ -->
+
+<script type="module" src="{{"_assets/js/3Dmodels/fire.js" | relative_url}}"></script>
+
+<br />
+<div class="main1">
+    <br />
+    <div class="container">
+        <div class="row">
+            <div class="d-flex justify-content-center">
+                <div class="row my-2">
+                    <div class="col">
+                        <h3 class="d-flex justify-content-center">Fogo</h3>
+                        <canvas id="fire">
+                            <h2>Seu Navegador Não Suporta Canvas</h2>
+                        </canvas>
+                        <br />
+                        <div
+                            class="d-flex flex-column align-items-center fireControl"
+                        >
+                            <label
+                                for="fireIntensity"
+                                class="d-flex justify-content-center"
+                            >
+                                <h6>Intensidade do Fogo:</h6>
+                            </label>
+                            <input
+                                type="range"
+                                id="fireIntensity"
+                                class="d-flex fireRange"
+                                min="4"
+                                max="10"
+                                value="7"
+                            />
+                            <label
+                                for="fireDirection"
+                                class="d-flex justify-content-center mt-3"
+                            >
+                                <h6>Direção do Fogo:</h6>
+                            </label>
+                            <input
+                                type="range"
+                                id="fireDirection"
+                                class="d-flex fireRange"
+                                min="-1"
+                                max="1"
+                                step="1"
+                                value="0"
+                            />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
