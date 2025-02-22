@@ -1,5 +1,5 @@
 ---
 title: Calculadora
-layout: page/calculadora
+layout: page/tools/calculadora
 permalink: "/calculadora.html"
 ---

@@ -1,5 +1,5 @@
 ---
 title: Cronômetro
-layout: page/cronometro
+layout: page/tools/cronometro
 permalink: "/cronometro.html"
 ---

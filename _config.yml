@@ -1,6 +1,6 @@
 author: Lucas Felipe Turos
-baseurl: "/" # prod
-# baseurl: "" # dev
+# baseurl: "/" # prod
+baseurl: "" # dev
 url: "https://lucasfturos.github.io/homepage"
 domain: "lucasfturos.github.io"
 encoding: UTF-8

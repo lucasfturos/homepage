@@ -1,5 +1,5 @@
 ---
 title: Toróide
-layout: page/torus
+layout: page/3Dmodels/torus
 permalink: "/torus.html"
 ---
