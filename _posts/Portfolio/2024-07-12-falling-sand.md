@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog/post
 title: Falling Sand
 date: 12-7-2024 21:10
 categorie: Portfolio

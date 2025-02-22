@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog/post
 title: Music Spectrum
 date: 17-2-2024 11:36
 categorie: Portfolio

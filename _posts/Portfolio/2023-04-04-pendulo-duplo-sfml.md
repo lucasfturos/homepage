@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog/post
 title: Pêndulo Duplo em SFML e C++
 date: 4-4-2023 16:36
 categorie: Portfolio

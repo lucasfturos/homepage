@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog/post
 title: Convert Image to Audio
 date: 12-7-2024 21:32
 categorie: Portfolio

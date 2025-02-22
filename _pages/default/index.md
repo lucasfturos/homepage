@@ -1,5 +1,5 @@
 ---
 title: Inicio
-layout: index
+layout: default/index
 permalink: "/"
 ---
