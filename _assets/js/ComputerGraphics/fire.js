@@ -62,10 +62,8 @@ class Fire {
         for (let col = 0; col < this.fireWidth; col++) {
             const pixelIndex = (this.fireHeight - 1) * this.fireWidth + col;
             this.firePixels[pixelIndex] = {
-                fireIntensity: Math.floor(Math.random() * 51) + 70,
-                windIntensity:
-                    (Math.random() < 0.5 ? -1 : 1) *
-                    Math.floor(Math.random() * 25),
+                fireIntensity: Math.floor(Math.random() * (70 - 51) + 51),
+                windIntensity: this.fireDirection,
             };
         }
     }
@@ -83,7 +81,6 @@ class Fire {
 
     updateIntensityPerPixel(currentPixelIndex) {
         const belowPixelIndex = currentPixelIndex + this.fireWidth;
-
         if (belowPixelIndex >= this.fireWidth * this.fireHeight) return;
 
         const fireIntensityDecay = Math.floor(
@@ -97,8 +94,18 @@ class Fire {
         );
 
         let spreadDirection = 0;
-        if (this.fireDirection === 0) {
-            spreadDirection = Math.random() < 0.3 ? -1 : 1;
+        switch (this.fireDirection) {
+            case -1: // Left Wind
+                spreadDirection = Math.floor(Math.random() < 0.5 ? 0 : -1);
+                break;
+            case 0: // Wind from both sides
+                spreadDirection = Math.floor(Math.random() < 0.1 ? -1 : 1);
+                break;
+            case 1: // Right Wind
+                spreadDirection = Math.floor(Math.random() < 0.5 ? 1 : 0);
+                break;
+            default:
+                break;
         }
 
         const crossPixelIndex = currentPixelIndex + spreadDirection;
@@ -123,16 +130,18 @@ class Fire {
                 const index = col + this.fireWidth * row;
                 const pixel = this.firePixels[index];
 
-                const colorH = Math.round(
-                    20 + (pixel.fireIntensity * 40) / 100
-                );
-                const colorL = Math.min(100, pixel.fireIntensity + 20);
-                const color = `hsl(${colorH}, 100%, ${colorL}%)`;
-                const x = col * this.pixelWidth;
-                const y = row * this.pixelHeight;
+                if (pixel.fireIntensity > 0) {
+                    const colorH = Math.round(
+                        20 + (pixel.fireIntensity * 40) / 100
+                    );
+                    const colorL = Math.min(100, pixel.fireIntensity + 20);
+                    const color = `hsl(${colorH}, 100%, ${colorL}%)`;
+                    const x = col * this.pixelWidth;
+                    const y = row * this.pixelHeight;
 
-                this.ctx.fillStyle = color;
-                this.ctx.fillRect(x, y, this.pixelWidth, this.pixelHeight);
+                    this.ctx.fillStyle = color;
+                    this.ctx.fillRect(x, y, this.pixelWidth, this.pixelHeight);
+                }
             }
         }
     }
@@ -145,7 +154,7 @@ class Fire {
     run() {
         this.createSource();
         this.createSpread();
-        setInterval(() => this.createSource(), 500);
+        setInterval(() => this.createSource(), 1000);
     }
 }
 
