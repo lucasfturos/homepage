@@ -1,5 +1,5 @@
 ---
 title: Fogo
-layout: page/3Dmodels/fire
+layout: page/ComputerGraphics/fire
 permalink: "/fire.html"
 ---

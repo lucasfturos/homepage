@@ -22,40 +22,37 @@ layout: default
                         <pre><code class="language-javascript">
               import { Point, pi } from "./Point.js";
 
-                const c = document.getElementById("torus");
+                const c = document.getElementById("esfera3d");
                 const ctx = c.getContext("2d");
                 const w = (c.width = 480);
                 const h = (c.height = 480);
                 document.body.appendChild(c);
                 
-                class Torus {
-                    constructor(innerRadius = 5, outterRadius = 10, vertexQuantity = 20) {
+                class Sphere {
+                    constructor(radius = 20, vertexQuantity = 20) {
                         this.point = [];
                         this.color = `rgb(255,255,255)`;
-                        this.innerRadius = innerRadius;
-                        this.outterRadius = outterRadius;
+                        this.radius = radius;
                         this.numVertexes = 0;
                         this.vertexQuantity = vertexQuantity;
                         this.rotation = 0;
                         this.distance = 0;
                         this.init();
                     }
+                
                     init() {
                         let increment = pi / this.vertexQuantity;
                         for (let alpha = increment; alpha <= 2 * pi; alpha += increment) {
-                            for (let beta = increment; beta <= 2 * pi; beta += increment) {
+                            for (let beta = increment; beta <= pi; beta += increment) {
                                 let p = (this.point[this.numVertexes] = new Point());
-                                p.x =
-                                    (this.outterRadius + this.innerRadius * Math.cos(beta)) *
-                                    Math.cos(alpha);
-                                p.y =
-                                    (this.outterRadius + this.innerRadius * Math.cos(beta)) *
-                                    Math.sin(alpha);
-                                p.z = this.innerRadius * Math.sin(beta);
+                                p.x = Math.cos(alpha) * Math.sin(beta) * this.radius;
+                                p.y = Math.sin(alpha) * this.radius;
+                                p.z = Math.cos(alpha) * Math.cos(beta) * this.radius;
                                 this.numVertexes++;
                             }
                         }
                     }
+                
                     draw() {
                         let x, y;
                         let p = new Point(0, 0, 0, ctx);
@@ -63,28 +60,28 @@ layout: default
                             p.x = this.point[i].x;
                             p.y = this.point[i].y;
                             p.z = this.point[i].z;
-                            p.rotateX(this.rotation);
                             p.rotateY(this.rotation);
-                            p.rotateZ(this.rotation);
                             x = p.getProjection(this.distance, p.x, w / 2.0, 100.0);
                             y = p.getProjection(this.distance, p.y, h / 2.0, 100.0);
                             p.draw(x, y, this.color);
                         }
                     }
+                
                     update() {
                         this.rotation += pi / 360.0;
                         this.distance = 900;
                     }
                 }
-                const toroide = new Torus();
+                
+                const esfera = new Sphere();
                 let animationRunning = false;
                 
                 const draw = () => {
                     ctx.save();
                     ctx.clearRect(0, 0, w, h);
-                    toroide.draw();
+                    esfera.draw();
                     ctx.restore();
-                    toroide.update();
+                    esfera.update();
                 
                     animationRunning ? requestAnimationFrame(draw) : 0;
                 };
@@ -103,27 +100,28 @@ layout: default
                     .addEventListener("click", startAnimation);
                 document
                     .getElementById("stop_clean")
-                    .addEventListener("click", stopCleanCanvas);                            
+                    .addEventListener("click", stopCleanCanvas);
+                            
                         </code></pre>
                     </div>
                 </div>
             </div>
         </div>
         <div class="d-flex justify-content-center">
-            <div class="row my-2" style="margin-top: 20px;">
+            <div class="row my-2" style="margin-top: 30px;">
                 <div class="col">
                     <button class="btn btn-dark" id="play" style="margin-right: 10px;">Play</button>
                     <button class="btn btn-dark" id="stop_clean">Stop / Clean</button><br><br>
-                    <h3 class="d-flex justify-content-center">Torus</h3>
-                    <canvas id="torus">
+                    <h3 class="d-flex justify-content-center">Esfera</h3><br><br><br>
+                    <canvas id="esfera3d">
                         <h2>Seu Navegador Não Suporta Canvas</h2>
                     </canvas>
-                    <script type="module" src="{{"_assets/js/3Dmodels/torus.js" | relative_url}}"></script>
+                    <script type="module" src="{{"_assets/js/ComputerGraphics/sphere.js" | relative_url}}"></script>
                 </div>
             </div>
         </div>
     </div>
-    
+
 </div>
 
 <!-- Prism.js - https://prismjs.com/-->
