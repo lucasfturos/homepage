@@ -19,13 +19,13 @@ class Fire {
     }
 
     setup() {
-        const scaleFactor = 0.8;
+        const scaleFactor = 1.4;
         const scale = Math.min(
             (window.innerWidth / this.baseWidth) * scaleFactor,
             (window.innerHeight / this.baseHeight) * scaleFactor
         );
 
-        this.pixelWidth = Math.max(1, Math.floor(scale));
+        this.pixelWidth = Math.max(2, Math.floor(scale * 0.5));
         this.pixelHeight = this.pixelWidth;
         this.fireWidth = Math.floor(window.innerWidth / this.pixelWidth / 2);
         this.fireHeight = Math.floor(window.innerHeight / this.pixelHeight / 2);
@@ -99,7 +99,7 @@ class Fire {
                 spreadDirection = Math.floor(Math.random() < 0.5 ? 0 : -1);
                 break;
             case 0: // Wind from both sides
-                spreadDirection = Math.floor(Math.random() < 0.1 ? -1 : 1);
+                spreadDirection = Math.floor(Math.random() < 0.5 ? -1 : 1);
                 break;
             case 1: // Right Wind
                 spreadDirection = Math.floor(Math.random() < 0.5 ? 1 : 0);
@@ -109,17 +109,18 @@ class Fire {
         }
 
         const crossPixelIndex = currentPixelIndex + spreadDirection;
-        if (crossPixelIndex >= 0 && crossPixelIndex < this.firePixels.length) {
-            this.firePixels[crossPixelIndex] = {
-                fireIntensity: newFireIntensity,
-                windIntensity: belowPixel.windIntensity,
-            };
+        const sameRow =
+            Math.floor(currentPixelIndex / this.fireWidth) ===
+            Math.floor(crossPixelIndex / this.fireWidth);
+        if (
+            sameRow &&
+            crossPixelIndex >= 0 &&
+            crossPixelIndex < this.firePixels.length
+        ) {
+            this.firePixels[crossPixelIndex].fireIntensity = newFireIntensity;
+        } else {
+            this.firePixels[currentPixelIndex].fireIntensity = newFireIntensity;
         }
-
-        this.firePixels[currentPixelIndex] = {
-            fireIntensity: newFireIntensity,
-            windIntensity: belowPixel.windIntensity,
-        };
     }
 
     render() {
@@ -134,7 +135,7 @@ class Fire {
                     const colorH = Math.round(
                         20 + (pixel.fireIntensity * 40) / 100
                     );
-                    const colorL = Math.min(100, pixel.fireIntensity + 20);
+                    const colorL = Math.min(90, pixel.fireIntensity + 10);
                     const color = `hsl(${colorH}, 100%, ${colorL}%)`;
                     const x = col * this.pixelWidth;
                     const y = row * this.pixelHeight;
