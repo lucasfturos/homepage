@@ -198,8 +198,9 @@ footer {
 }
 
 #fire {
-    width: 100%;
-    height: auto;
+    width: 70vw;
+    height: 60vh;
+    display: block;
     margin-top: 20px;
     background: transparent;
 }
@@ -235,6 +236,22 @@ footer {
     border-color: #ff4500;
 }
 
+@media (max-width: 768px) {
+    #esfera3d,
+    #torus {
+        width: 90%;
+        margin-top: 90px;
+        background: transparent;
+        position: absolute;
+        transform: translate(-50%, -50%);
+    }
+
+    #fire {
+        width: 90vw;
+        height: 50vh;
+    }
+}
+
 /* Estilo da data e hora */
 
 #data,
@@ -262,23 +279,13 @@ footer {
     }
 }
 
-/* Ajuste da tela em smartphone */
-@media screen and (max-width: 25em) {
+@media (max-width: 768px) {
     #data,
     #hora {
         color: #fff;
         font-size: 50px;
         font-weight: 300;
         align-self: center;
-    }
-
-    #esfera3d,
-    #torus {
-        width: 90%;
-        margin-top: 90px;
-        background: transparent;
-        position: absolute;
-        transform: translate(-50%, -50%);
     }
 }
 
