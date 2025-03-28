@@ -1,21 +1,25 @@
-## Site de Portfólio. Feito em HTML, CSS, JavaScript e Ruby Jekyll
+## Site de Portfólio.
 
-Testes dos recursos do GitHub Pages
+Feito em HTML, CSS, JavaScript e Ruby (Jekyll)
 
-## O site tem:
+## Conteúdo do site:
 
 -   **Uma apresentação**
--   **Um currículo**
--   **Modelos 3D usando Javascript e Canvas**
+-   **Computação Gráfica**
     -   Esfera
+    -   Fogo do Doom
     -   Toroide
 -   **Blog com as seguintes postagens**
-    -   Portfólio;
-    -   Artigos.
+    -   Artigos
+    -   Portfólio
 -   **Ferramentas**
     -   Calculadora
+    -   Cronômetro
     -   Data e hora
     -   Área de desenho (Draw)
 -   **Sites**
     -   Audio Visualizer (Visualizador do Espectro de Áudio)
+    -   Fluid Simulation (Simulação 2D de fluídos, foi feito em C++)
     -   WebGL (Tem modelos 3D e um visualizador de arquivos Wavefront .obj)
+-   **Sobre**
+    -   Meu readme do Github
