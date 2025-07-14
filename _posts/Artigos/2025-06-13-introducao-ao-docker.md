@@ -1,6 +1,6 @@
 ---
 layout: blog/post
-title: Introdução ao Docker: Guia Rápido de Comandos
+title: "Introdução ao Docker: Guia Rápido de Comandos"
 categorie: Artigo
 description: Um guia rápido e prático com os principais comandos Docker e docker-compose para iniciantes. Ideal para quem está começando e quer entender como listar, executar, parar e gerenciar containers, imagens, volumes e redes no dia a dia.
 date: 14-06-2025 15:30
@@ -10,88 +10,104 @@ image: "https://www.svgrepo.com/show/303231/docker-logo.svg"
 <div class="post-line"></div>
 <br />
 
-{:.post-text}
+<div class="post-text">
+  <p>Se você está começando no mundo dos containers, provavelmente já ouviu falar do Docker. Ele se tornou uma das ferramentas mais populares para criar ambientes isolados, padronizados e portáteis para aplicações — seja em desenvolvimento, testes ou produção.</p>
+  <p>Neste artigo, preparei um guia rápido e direto com os comandos mais usados no dia a dia de quem trabalha com Docker e docker-compose. A ideia é te dar uma referência prática para rodar, parar, limpar e gerenciar seus containers e imagens sem complicação.</p>
+  <p>Se você está dando os primeiros passos ou quer ter um "cola rápida" sempre à mão, esse conteúdo é pra você. Segue abaixo os mais comuns.</p>
+</div>
 
+<h2 class="post-text">Containers</h2>
 
-Se você está começando no mundo dos containers, provavelmente já ouviu falar do Docker. Ele se tornou uma das ferramentas mais populares para criar ambientes isolados, padronizados e portáteis para aplicações — seja em desenvolvimento, testes ou produção.
+<table class="table post-text">
+  <thead>
+    <tr>
+      <th>Ação</th>
+      <th>Comando</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Listar containers ativos</td><td><code class="code-text">docker ps</code></td></tr>
+    <tr><td>Listar todos os containers</td><td><code class="code-text">docker ps -a</code></td></tr>
+    <tr><td>Iniciar container</td><td><code class="code-text">docker start &lt;nome ou ID&gt;</code></td></tr>
+    <tr><td>Parar container</td><td><code class="code-text">docker stop &lt;nome ou ID&gt;</code></td></tr>
+    <tr><td>Remover container</td><td><code class="code-text">docker rm &lt;nome ou ID&gt;</code></td></tr>
+    <tr><td>Executar comando no container</td><td><code class="code-text">docker exec -it &lt;nome ou ID&gt; bash</code></td></tr>
+    <tr><td>Ver logs do container</td><td><code class="code-text">docker logs &lt;nome ou ID&gt;</code></td></tr>
+  </tbody>
+</table>
 
-Neste artigo, preparei um guia rápido e direto com os comandos mais usados no dia a dia de quem trabalha com Docker e docker-compose. A ideia é te dar uma referência prática para rodar, parar, limpar e gerenciar seus containers e imagens sem complicação.
+<hr />
 
-Se você está dando os primeiros passos ou quer ter um "cola rápida" sempre à mão, esse conteúdo é pra você. Segue abaixo os mais comuns.
+<h2 class="post-text">Imagens</h2>
 
-{:.post-text}
+<table class="table post-text">
+  <thead>
+    <tr>
+      <th>Ação</th>
+      <th>Comando</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Listar imagens locais</td><td><code class="code-text">docker images</code></td></tr>
+    <tr><td>Remover imagem</td><td><code class="code-text">docker rmi &lt;nome ou ID&gt;</code></td></tr>
+    <tr><td>Criar imagem via Dockerfile</td><td><code class="code-text">docker build -t nome_da_imagem .</code></td></tr>
+    <tr><td>Baixar imagem do Docker Hub</td><td><code class="code-text">docker pull nome_da_imagem</code></td></tr>
+    <tr><td>Subir imagem para Docker Hub</td><td><code class="code-text">docker push usuario/nome_da_imagem</code></td></tr>
+  </tbody>
+</table>
 
-## Containers
+<hr />
 
-{:.post-text}
+<h2 class="post-text">Volumes e Redes</h2>
 
-| Ação                          | Comando                                                                 |
-|-------------------------------|-------------------------------------------------------------------------|
-| Listar containers ativos      | `docker ps`                                                             |
-| Listar todos os containers    | `docker ps -a`                                                          |
-| Iniciar container             | `docker start <nome ou ID>`                                            |
-| Parar container               | `docker stop <nome ou ID>`                                             |
-| Remover container             | `docker rm <nome ou ID>`                                               |
-| Executar comando no container | `docker exec -it <nome ou ID> bash` ou `sh`                            |
-| Ver logs do container         | `docker logs <nome ou ID>`                                             |
+<table class="table post-text">
+  <thead>
+    <tr>
+      <th>Ação</th>
+      <th>Comando</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Listar volumes</td><td><code class="code-text">docker volume ls</code></td></tr>
+    <tr><td>Remover volume</td><td><code class="code-text">docker volume rm &lt;nome&gt;</code></td></tr>
+    <tr><td>Listar redes</td><td><code class="code-text">docker network ls</code></td></tr>
+  </tbody>
+</table>
 
----
+<hr />
 
-{:.post-text}
+<h2 class="post-text">Limpeza</h2>
 
-## Imagens
+<table class="table post-text">
+  <thead>
+    <tr>
+      <th>Ação</th>
+      <th>Comando</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Remover containers parados</td><td><code class="code-text">docker container prune</code></td></tr>
+    <tr><td>Remover imagens não usadas</td><td><code class="code-text">docker image prune</code></td></tr>
+    <tr><td>Remover tudo não usado</td><td><code class="code-text">docker system prune</code></td></tr>
+  </tbody>
+</table>
 
-{:.post-text}
+<hr />
 
-| Ação                          | Comando                                                                 |
-|-------------------------------|-------------------------------------------------------------------------|
-| Listar imagens locais         | `docker images`                                                        |
-| Remover imagem                | `docker rmi <nome ou ID>`                                              |
-| Criar imagem via Dockerfile   | `docker build -t nome_da_imagem .`                                     |
-| Baixar imagem do Docker Hub   | `docker pull nome_da_imagem`                                           |
-| Subir imagem para Docker Hub  | `docker push usuario/nome_da_imagem`                                   |
+<h2 class="post-text">docker-compose</h2>
 
----
-
-{:.post-text}
-
-## Volumes e Redes
-
-{:.post-text}
-
-| Ação                          | Comando                                                                 |
-|-------------------------------|-------------------------------------------------------------------------|
-| Listar volumes                | `docker volume ls`                                                     |
-| Remover volume                | `docker volume rm <nome>`                                              |
-| Listar redes                  | `docker network ls`                                                    |
-
----
-
-{:.post-text}
-
-## Limpeza
-
-{:.post-text}
-
-| Ação                          | Comando                                                                 |
-|-------------------------------|-------------------------------------------------------------------------|
-| Remover containers parados    | `docker container prune`                                               |
-| Remover imagens não usadas    | `docker image prune`                                                   |
-| Remover tudo não usado        | `docker system prune`                                                  |
-
----
-
-{:.post-text}
-
-## docker-compose
-
-{:.post-text}
-
-| Ação                          | Comando                                                                 |
-|-------------------------------|-------------------------------------------------------------------------|
-| Subir os serviços             | `docker-compose up`                                                    |
-| Subir e reconstruir           | `docker-compose up --build`                                            |
-| Parar os serviços             | `docker-compose down`                                                  |
-| Ver containers do compose     | `docker-compose ps`                                                    |
-| Ver logs dos serviços         | `docker-compose logs -f`                                               |
-
+<table class="table post-text">
+  <thead>
+    <tr>
+      <th>Ação</th>
+      <th>Comando</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr><td>Subir os serviços</td><td><code class="code-text">docker-compose up</code></td></tr>
+    <tr><td>Subir e reconstruir</td><td><code class="code-text">docker-compose up --build</code></td></tr>
+    <tr><td>Parar os serviços</td><td><code class="code-text">docker-compose down</code></td></tr>
+    <tr><td>Ver containers do compose</td><td><code class="code-text">docker-compose ps</code></td></tr>
+    <tr><td>Ver logs dos serviços</td><td><code class="code-text">docker-compose logs -f</code></td></tr>
+  </tbody>
+</table>
