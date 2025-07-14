@@ -3,7 +3,7 @@ layout: blog/post
 title: "Introdução ao Docker: Guia Rápido de Comandos"
 categorie: Artigo
 description: Um guia rápido e prático com os principais comandos Docker e docker-compose para iniciantes. Ideal para quem está começando e quer entender como listar, executar, parar e gerenciar containers, imagens, volumes e redes no dia a dia.
-date: 14-06-2025 15:30
+date: 14-07-2025 15:30
 image: "https://www.svgrepo.com/show/303231/docker-logo.svg"
 ---
 
