@@ -28,20 +28,6 @@ const renderMarkdownFromUrl = async (url) => {
                 markdown.substring(endIndex);
         }
 
-        const startMarkerVisitorCounter = "## Visitor Counter";
-        const endMarkerVisitorCounter = "</div>";
-        const startIndexVisitorCounter = markdown.indexOf(
-            startMarkerVisitorCounter
-        );
-        const endIndexVisitorCounter =
-            markdown.indexOf(
-                endMarkerVisitorCounter,
-                startIndexVisitorCounter
-            ) + endMarkerVisitorCounter.length;
-        markdown =
-            markdown.substring(0, startIndexVisitorCounter) +
-            markdown.substring(endIndexVisitorCounter);
-
         const converter = new showdown.Converter();
         console.log("Converting Markdown to HTML...");
         const htmlContent = converter.makeHtml(markdown);
