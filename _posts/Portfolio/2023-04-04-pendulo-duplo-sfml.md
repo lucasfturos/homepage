@@ -1,40 +1,40 @@
 ---
+
 layout: blog/post
 title: Pêndulo Duplo em SFML e C++
 date: 4-4-2023 16:36
 categorie: Portfolio
 description: Este programa é uma simulação de um pêndulo duplo, seu plot foi feito utilizando a biblioteca do SFML. Eu desenvolvi ele em C++ e seus testes foram realizados no sistema Linux. Para ver o código fonte, acesse pelo botão logo abaixo.
 image: https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/Portfolio/PenduloDuploSFML/tela_do_pendulo.png?raw=true
-screenshot: https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/Portfolio/PenduloDuploSFML/pendulo_funcionando.gif?raw=true
+screenshot:
+    - path: https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/Portfolio/PenduloDuploSFML/tela_do_pendulo.png?raw=true
+    - path: https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/Portfolio/PenduloDuploSFML/pendulo_funcionando.gif?raw=true
+
 ---
 
-<div class="post-line"></div>
-<br />
+---
+{:.post-line}
 
-{:.post-text}
+{: .post-text}
 
 ## Tela do programa
 
-<br>
-<div class="text-center">
-  <img
-    src="{{ page.screenshot }}"
-    class="rounded post-img modal-trigger"
-    alt=""
-  />
-</div>
-<br />
+{% for images in page.screenshot %}
 
-{:.post-text}
+{% include blog/modal-image.html src=images.path %}
 
-<div class="post-line"></div>
-<br />
+{% endfor %}
+
+---
+{:.post-line}
 
 ## Sobre
-<br />
+{: .post-text}
 
-{:.post-text}
-{{page.description}}
+{{ page.description }}
+{: .post-text}
+
+<br />
 
 <div align="center">
     <a type="button" 
@@ -46,10 +46,8 @@ screenshot: https://github.com/lucasfturos/myhomepage-image/blob/main/img/blog/P
         Código fonte
     </a>
 </div>
-<br>
 
-<div class="modal-img" id="modal-img">
-  <span class="close"><ion-icon name="close-outline"></ion-icon></span>
-  <img class="rounded post-img modal-content" id="img-content" />
-  <div id="caption"></div>
-</div>
+<br />
+
+---
+{:.post-line}

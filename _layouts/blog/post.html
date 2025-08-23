@@ -3,66 +3,42 @@ title: site.title
 layout: default
 ---
 
-<br>
+<br />
 <body class="main1">
-  {% if page.categorie == "Portfolio" %}
-  <div class="container">
-    <br>
-   
-    <div class="card post-card">
-      <div class="card-body">
-        <div class="row">
-          <div class="col">
-            <h2 class="post-title">{{ page.title}}</h2>
-            <br />
-          </div>
-          <div class="col-md-auto text-end">
-            <time class="post-data"
-              >{{ page.date | date: "%d %b. %Y"}}</time
-            >
-          </div>
-          <div class="col col-1">
-             <a type="button" 
-                class="btn text-white btn-back-post" 
-                href="{{ site.baseurl }}/portfolio">
-                  <ion-icon name="chevron-back-outline"></ion-icon>
-              </a>
-          </div>
-          <br />
+    {% if page.categorie == "Portfolio" or page.categorie == "Artigo" %}
+    <div class="container my-4">
+        <div class="card post-card">
+            <div class="card-body">
+                <div class="row align-items-center mb-3">
+                    <div class="col">
+                        <h2 class="post-title">{{ page.title }}</h2>
+                    </div>
+                    <div class="col-md-auto text-end">
+                        {% if page.categorie == "Portfolio" %}
+                        <time class="post-data"
+                            >{{ page.date | date: "%d %b. %Y" }}</time
+                        >
+                        {% else %}
+                        <time class="post-data"
+                            >{{ page.date | date: "%B %-d, %Y" }}</time
+                        >
+                        {% endif %}
+                    </div>
+                    <div class="col-auto">
+                        <a
+                            class="btn text-white btn-back-post"
+                            href="{{ site.baseurl }}/{% if page.categorie == 'Portfolio' %}portfolio{% else %}artigo{% endif %}"
+                        >
+                            <ion-icon name="chevron-back-outline"></ion-icon>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="post-content">{{ content | markdownify }}</div>
+            </div>
         </div>
-        <br />
-        {{ content | markdownify }}
-      </div>
     </div>
-  </div>
-  {% endif %} {% if page.categorie == "Artigo" %}
-  <div class="container">
-    <div class="card post-card">
-      <div class="card-body">
-        <div class="row">
-          <div class="col">
-            <h2 class="post-title">{{ page.title}}</h2>
-          </div>
-          <div class="col-md-auto text-end">
-            <time class="post-data"
-              >{{ page.date | date: "%B, %-d/%Y"}}</time
-            >
-          </div>
-          <div class="col col-1">
-             <a type="button" 
-                class="btn text-white btn-back-post" 
-                href="{{ site.baseurl }}/artigo">
-                  <ion-icon name="chevron-back-outline"></ion-icon>
-              </a>
-          </div>
-        </div>
-        <br />
-        {{ content | markdownify }}
-        <br />
-      </div>
-    </div>
-  </div>
-  {% endif %}
-  <br />
-  <script src="{{'_assets/js/modal_image.js' | relative_url}}"></script>
+    {% endif %}
+
+    <script src="{{ '_assets/js/modal_image.js' | relative_url }}"></script>
 </body>

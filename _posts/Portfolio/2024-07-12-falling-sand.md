@@ -4,41 +4,30 @@ title: Falling Sand
 date: 12-7-2024 21:10
 categorie: Portfolio
 description: Este projeto é uma simulação de areia caindo.
-image: https://github.com/lucasfturos/FallingSand/raw/main/screenshot/repo-thubmnail.png
-screenshot: https://github.com/lucasfturos/FallingSand/raw/main/screenshot/sand.png
+image: https://raw.githubusercontent.com/lucasfturos/FallingSand/refs/heads/main/screenshot/repo-thubmnail.png
+screenshot:
+  - path: https://raw.githubusercontent.com/lucasfturos/FallingSand/refs/heads/main/screenshot/menu.png
+  - path: https://raw.githubusercontent.com/lucasfturos/FallingSand/refs/heads/main/screenshot/sand.png
+  - path: https://raw.githubusercontent.com/lucasfturos/FallingSand/refs/heads/main/screenshot/sand_filterCRT.png
 ---
 
-<div class="post-line"></div>
-<br />
+---
+{:.post-line}
 
-{:.post-text}
-
+{: .post-text}
 ## Tela Inicial
 
-<br />
-<div class="text-center">
-  <img
-    src="{{ page.image }}"
-    class="rounded post-img modal-trigger"
-    alt=""
-  />
-</div>
-<br />
-<div class="post-line"></div>
-<br />
+{% include blog/modal-image.html src=page.image %}
 
-{:.post-text}
+---
+{:.post-line}
 
+{: .post-text}
 ## Sobre
 
-<br />
-
-{:.post-text}
-
-<p>Este projeto é uma simulação de areia caindo.</p>
-{:.post-text}
-<p>Desenvolvido em C++ com a biblioteca SFML.</p>
-{:.post-text}
+{: .post-text}
+Este projeto é uma simulação de areia caindo.  
+Desenvolvido em C++ com a biblioteca SFML.
 
 <div align="center">
     <a type="button" 
@@ -51,27 +40,12 @@ screenshot: https://github.com/lucasfturos/FallingSand/raw/main/screenshot/sand.
     </a>
 </div>
 
-<br />
-<div class="post-line"></div>
-<br />
+---
+{:.post-line}
 
-{:.post-text}
-
+{: .post-text}
 ## Screenshot
 
-<br />
-
-<div class="text-center">
-  <img
-    src="{{ page.screenshot }}"
-    class="rounded post-img modal-trigger"
-  />
-</div>
-<br />
-
-<br>
-<div class="modal-img" id="modal-img">
-  <span class="close"><ion-icon name="close-outline"></ion-icon></span>
-  <img class="rounded post-img modal-content" id="img-content" />
-  <div id="caption"></div>
-</div>
+{% for images in page.screenshot %}
+{% include blog/modal-image.html src=images.path %}
+{% endfor %}

@@ -1,0 +1,19 @@
+{% if include.src %}
+<div class="text-center">
+    <img
+        src="{{ include.src }}"
+        class="rounded post-img modal-trigger"
+        alt=""
+    />
+</div>
+<br />
+{% elsif page.image %}
+<div class="text-center">
+    <img src="{{ page.image }}" class="rounded post-img modal-trigger" alt="" />
+</div>
+{% endif %}
+
+<div class="modal-img" id="modal-img">
+    <span class="close"><ion-icon name="close-outline"></ion-icon></span>
+    <img class="rounded post-img modal-content" id="img-content" />
+</div>

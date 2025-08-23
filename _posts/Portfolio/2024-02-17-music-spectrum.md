@@ -14,34 +14,26 @@ screenshot:
   - path: https://raw.githubusercontent.com/lucasfturos/MusicSpectrum/main/assets/img/Screenshot/WaveFFT3D.gif
 ---
 
-<div class="post-line"></div>
-<br />
+---
+{:.post-line}
 
-{:.post-text}
+{: .post-text}
 ## Tela Inicial
 
-<br />
-<div class="text-center">
-  <img
-    src="{{ page.screenshot[0].path }}"
-    class="rounded post-img modal-trigger"
-    alt=""
-  />
-</div>
-<br />
-<div class="post-line"></div>
-<br />
+{% for images in page.screenshot limit:1 %}
+{% include blog/modal-image.html src=images.path %}
+{% endfor %}
 
-{:.post-text}
+---
+{:.post-line}
+
+{: .post-text}
 ## Sobre
-<br />
 
-{:.post-text}
-<p>Visualizador de espectro de audio. Aplicação da transformada de Fourier FFT em conjunto com a fórmula de Euler.</p>
-<p>Suporta audios no formato WAV e FLAC.</p>
-{:.post-text}
-<p>Desenvolvido em C++ com a biblioteca SFML.</p>
-{:.post-text}
+{: .post-text}
+Visualizador de espectro de áudio. Aplicação da transformada de Fourier FFT em conjunto com a fórmula de Euler.  
+Suporta áudios nos formatos WAV e FLAC.  
+Desenvolvido em C++ com a biblioteca SFML.
 
 <div align="center">
     <a type="button" 
@@ -54,30 +46,14 @@ screenshot:
     </a>
 </div>
 
-<br />
-<div class="post-line"></div>
-<br />
+---
+{:.post-line}
 
-{:.post-text}
+{: .post-text}
 
 ## Screenshot
-<br />
 
 {% for images in page.screenshot %}
-
-<div class="text-center">
-  <img
-    src="{{ images.path }}"
-    class="rounded post-img modal-trigger"
-  />
-</div>
-<br />
-
+{% include blog/modal-image.html src=images.path %}
 {% endfor %}
 
-<br>
-<div class="modal-img" id="modal-img">
-  <span class="close"><ion-icon name="close-outline"></ion-icon></span>
-  <img class="rounded post-img modal-content" id="img-content" />
-  <div id="caption"></div>
-</div>
