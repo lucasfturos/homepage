@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
+
 * {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -183,6 +185,23 @@ footer {
 .btn-dark {
     background-color: #000000;
     border: none;
+}
+
+.shadertoy-text {
+    font-family: "Lobster", cursive;
+    font-size: 28px;
+    color: #ffffff;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: 35px;
+    cursor: pointer;
+    margin-left: 15px;
+    margin-top: 10px;
+    transition: transform 0.3s ease, text-shadow 0.3s ease;
+    text-align: center;
+    line-height: 35px;
 }
 
 /* Estilo dos modelos 3D */
