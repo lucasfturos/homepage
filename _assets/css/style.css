@@ -43,7 +43,7 @@ body {
 .main {
     width: 100%;
     min-height: 100vh;
-    margin-top: 20px;
+    padding-top: 20px;
     padding-bottom: 40px;
 
     background: linear-gradient(linear, #000000, #001338, #4b566b);
