@@ -2,8 +2,7 @@
 layout: default
 ---
 
-<br />
-<body class="main1">
+<main class="main">
     <div class="container-fluid port-container d-flex justify-content-center">
         <div class="card-container row">
             {% for post in site.posts %} {% if post.categorie == "Artigo" %}
@@ -33,4 +32,4 @@ layout: default
             {% endif %} {% endfor %}
         </div>
     </div>
-</body>
+</main>

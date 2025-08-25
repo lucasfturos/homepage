@@ -34,28 +34,18 @@ h6 {
 
 html,
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     padding: 0;
 }
 
-html,
 .main {
     width: 100%;
-    height: 100%;
-    background: linear-gradient(linear, #000000, #001338, #4b566b);
-    background: -webkit-gradient(
-        linear,
-        center top,
-        center bottom,
-        from(#000000),
-        color-stop(50%, #001338),
-        to(#4b566b)
-    );
-    background: -moz-linear-gradient(top, #000000, #001338, #4b566b);
-}
+    min-height: 100vh;
+    margin-top: 20px;
+    padding-bottom: 40px;
 
-.main1 {
-    margin-top: -20px;
     background: linear-gradient(linear, #000000, #001338, #4b566b);
     background: -webkit-gradient(
         linear,
@@ -327,6 +317,7 @@ footer {
 .port-container {
     padding: 30px;
     align-items: center;
+    padding-top: 40px;
 }
 
 .port-container h5 {
@@ -593,8 +584,14 @@ footer {
 
 /* Estilo do Draw */
 
+.main-draw,
 .container-draw {
-    margin-top: 20px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
 }
 
 .sidebar-draw {
@@ -606,27 +603,34 @@ footer {
     position: fixed;
     left: 0;
     top: 0;
-    height: 8rem;
-    width: 8rem;
+    height: 180px;
+    width: 10rem;
     z-index: 1000;
     overflow: hidden;
     transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    padding-top: 1rem;
 }
 
 .sidebar-draw ul {
-    position: relative;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
     flex-direction: column;
     list-style: none;
+    padding: 0 1rem;
+    margin: 0;
+    height: 100%;
 }
 
 .sidebar-draw ul li {
-    padding: 5px 0;
     display: flex;
-    justify-content: flex-start;
-    align-items: flex-start;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+.sidebar-draw label {
+    font-size: 14px;
+    width: 45%;
 }
 
 .sidebar-draw input {
@@ -634,25 +638,12 @@ footer {
     border-radius: 5px;
     border: none;
     text-align: center;
-    width: 70px;
-    margin-left: 10px;
+    width: 50%;
     font-size: 12px;
 }
 
 .sidebar-draw input:focus {
     outline: none;
-}
-
-.sidebar-draw li:last-of-type {
-    margin-top: auto;
-}
-
-.sidebar-draw label {
-    display: flex;
-    font-size: 15px;
-    width: 40px;
-    margin-left: -30px;
-    margin-bottom: 10px;
 }
 
 #color-draw {
@@ -670,12 +661,53 @@ footer {
 }
 
 #clear-draw {
+    background-color: transparent;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
     cursor: pointer;
-    width: 1.5rem;
-    bottom: 0.5rem;
-    right: 0.5rem;
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    transition: background 0.3s;
+}
+
+#clear-draw.active {
+    background-color: #fff;
+}
+
+#clear-draw.active svg {
+    fill: #000;
+}
+
+#clear-draw:hover {
+    background-color: #444;
+}
+
+#clear-draw svg {
+    width: 24px;
+    height: 24px;
+    fill: #fff;
+}
+
+#paint-cursor,
+#eraser-cursor {
+    position: fixed;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
     display: none;
+    z-index: 2000;
+}
+
+#paint-cursor {
+    background-color: #fff;
+}
+
+#eraser-cursor {
+    border: 2px solid #fff;
+    background-color: #fff;
 }
 
 /* Modal image */
@@ -765,6 +797,7 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-top: 60px;
 }
 
 .visor {
@@ -898,6 +931,7 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
+    padding-top: 60px;
 }
 
 #chronometer {
