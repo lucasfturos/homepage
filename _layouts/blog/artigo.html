@@ -3,10 +3,24 @@ layout: default
 ---
 
 <main class="main">
+    <div class="container-fluid mt-4 mb-4 d-flex justify-content-end">
+        <div class="port-input-container">
+            <input
+                type="text"
+                id="searchInput"
+                class="form-control"
+                placeholder="Buscar pelo nome..."
+            />
+        </div>
+    </div>
+
     <div class="container-fluid port-container d-flex justify-content-center">
-        <div class="card-container row">
+        <div class="card-container row" id="cardContainer">
             {% for post in site.posts %} {% if post.categorie == "Artigo" %}
-            <div class="card card-port">
+            <div
+                class="card card-port col-md-4 mb-4"
+                data-title="{{ post.title | downcase }}"
+            >
                 <img
                     src="{{ post.image }}"
                     class="card-img-top img-card"
@@ -32,4 +46,8 @@ layout: default
             {% endif %} {% endfor %}
         </div>
     </div>
+
+    {% include blog/no-results.html %}
+
+    <script src="{{"_assets/js/search_post.js" | relative_url}}"></script>
 </main>

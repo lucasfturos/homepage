@@ -298,7 +298,7 @@ footer {
     }
 }
 
-/* Card Portfolio */
+/* Estilo do Artigo e Portfolio */
 
 .detal_port {
     max-width: 35px;
@@ -317,11 +317,18 @@ footer {
 .port-container {
     padding: 30px;
     align-items: center;
-    padding-top: 40px;
+    padding-top: 0;
 }
 
 .port-container h5 {
     margin-bottom: 10px;
+}
+
+.port-input-container {
+    padding-top: 20px;
+    width: 100%;
+    max-width: 400px;
+    margin-right: 5px;
 }
 
 .card-container {
@@ -381,6 +388,16 @@ footer {
 /* Card Mobile */
 
 @media (max-width: 768px) {
+    .port-input-container {
+        max-width: 100%;
+        padding: 0 10px;
+        padding-top: 20px;
+    }
+
+    .port-input-container input {
+        width: 100%;
+    }
+
     .card-port .card-title {
         font-weight: bold;
         margin-bottom: 30px;
@@ -512,6 +529,33 @@ footer {
     }
     to {
         background-position: -5000px 10000px;
+    }
+}
+
+/* Estilo do Sem Resultado de Busca */
+
+.container-no-results {
+    height: 300px;
+    position: relative;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.no-results {
+    display: none;
+}
+
+.no-results .no-results-icon {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    fill: #b8b8b8;
+}
+
+@media (max-width: 768px) {
+    .no-results .no-results-icon {
+        width: 60px;
+        height: 60px;
     }
 }
 
