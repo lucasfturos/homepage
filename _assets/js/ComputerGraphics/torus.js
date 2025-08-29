@@ -43,6 +43,7 @@ class Torus {
             }
         }
     }
+
     draw() {
         this.updateColor();
 
@@ -60,11 +61,13 @@ class Torus {
             p.draw(x, y, this.color);
         }
     }
+
     update() {
         this.rotation += pi / 360.0;
         this.distance = 900;
     }
 }
+
 const toroide = new Torus();
 let animationRunning = false;
 

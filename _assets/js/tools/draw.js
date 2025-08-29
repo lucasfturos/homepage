@@ -1,5 +1,5 @@
 function getBgColor() {
-    return document.body.classList.contains("light-mode") ? 30 : 255;
+    return document.body.classList.contains("light-mode") ? 255 : 30;
 }
 
 let bgColor = getBgColor();
