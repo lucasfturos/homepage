@@ -16,8 +16,17 @@ class Torus {
         this.vertexQuantity = vertexQuantity;
         this.rotation = 0;
         this.distance = 0;
+
+        this.updateColor();
         this.init();
     }
+
+    updateColor() {
+        this.color = document.body.classList.contains("light-mode")
+            ? "rgb(0,0,0)"
+            : "rgb(255,255,255)";
+    }
+
     init() {
         let increment = pi / this.vertexQuantity;
         for (let alpha = increment; alpha <= 2 * pi; alpha += increment) {
@@ -35,6 +44,8 @@ class Torus {
         }
     }
     draw() {
+        this.updateColor();
+
         let x, y;
         let p = new Point(0, 0, 0, ctx);
         for (let i = 0; i < this.numVertexes; i++) {

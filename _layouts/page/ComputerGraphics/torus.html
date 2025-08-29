@@ -4,8 +4,11 @@ layout: default
 
 <head>
     <!--Prism.js - https://prismjs.com/ -->
-    <link rel="stylesheet" type="text/css" href="{{"_assets/css/prism.css" |
-    relative_url}}">
+    <link
+        rel="stylesheet"
+        type="text/css"
+        href="{{'_assets/css/prism.css' | relative_url}}"
+    />
 </head>
 
 <main class="main">
@@ -16,7 +19,7 @@ layout: default
             <div class="col">
                 <button
                     type="button"
-                    class="btn btn-dark text-white"
+                    class="btn dark-btn"
                     data-bs-toggle="collapse"
                     data-bs-target="#linux"
                 >
@@ -118,16 +121,16 @@ layout: default
             <div class="row my-2" style="margin-top: 20px">
                 <div class="col">
                     <button
-                        class="btn btn-dark"
+                        class="btn dark-btn"
                         id="play"
                         style="margin-right: 10px"
                     >
                         Play
                     </button>
-                    <button class="btn btn-dark" id="stop_clean">
-                        Stop / Clean</button
-                    ><br /><br />
-                    <h3 class="d-flex justify-content-center">Torus</h3>
+                    <button class="btn dark-btn" id="stop_clean">
+                        Stop / Clean
+                    </button>
+                    <br /><br />
                     <canvas id="torus">
                         <h2>Seu Navegador Não Suporta Canvas</h2>
                     </canvas>
@@ -138,11 +141,13 @@ layout: default
 </main>
 
 <!-- Torus.js -->
-<script type="module" src="{{"_assets/js/ComputerGraphics/torus.js" | relative_url}}"></script>
+<script
+    type="module"
+    src="{{'_assets/js/ComputerGraphics/torus.js' | relative_url}}"
+></script>
 
 <!-- Prism.js - https://prismjs.com/-->
 <script
     type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/prism/9000.0.1/prism.min.js"
 ></script>
-

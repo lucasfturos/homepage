@@ -1,6 +1,6 @@
 <header>
     <nav
-        class="navbar navbar-dark dark_menu navbar-expand-lg dark_menu fixed-top"
+        class="navbar navbar-dark dark-menu navbar-expand-lg dark-menu fixed-top"
     >
         <div class="container-fluid">
             <button
@@ -12,7 +12,7 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div
-                class="offcanvas dark_menu_mobile offcanvas-start"
+                class="offcanvas dark-menu-mobile offcanvas-start"
                 tabindex="-1"
                 id="navbarOffcanvasLg"
                 aria-labelledby="navbarOffcanvasLgLabel"
@@ -50,7 +50,7 @@
                                     Blog
                                 </a>
                                 <ul
-                                    class="dropdown-menu dropdown-menu-dark dark_dropdown"
+                                    class="dropdown-menu dropdown-menu-dark dark-dropdown"
                                 >
                                     <li>
                                         <a
@@ -84,7 +84,7 @@
                                     Computação Gráfica
                                 </a>
                                 <ul
-                                    class="dropdown-menu dropdown-menu-dark dark_dropdown"
+                                    class="dropdown-menu dropdown-menu-dark dark-dropdown"
                                 >
                                     <li>
                                         <a
@@ -126,7 +126,7 @@
                                     Ferramentas
                                 </a>
                                 <ul
-                                    class="dropdown-menu dropdown-menu-dark dark_dropdown"
+                                    class="dropdown-menu dropdown-menu-dark dark-dropdown"
                                 >
                                     <li>
                                         <a
@@ -176,7 +176,7 @@
                                     Sites
                                 </a>
                                 <ul
-                                    class="dropdown-menu dropdown-menu-dark dark_dropdown"
+                                    class="dropdown-menu dropdown-menu-dark dark-dropdown"
                                 >
                                     <li>
                                         <a
@@ -211,30 +211,29 @@
                                 Sobre
                             </a>
                         </li>
+                        <div class="d-flex align-items-center ms-auto">
+                            <div class="form-check form-switch">
+                                <input
+                                    class="form-check-input"
+                                    type="checkbox"
+                                    id="themeToggle"
+                                />
+                                <label
+                                    class="form-check-label"
+                                    for="themeToggle"
+                                >
+                                    <ion-icon
+                                        class="icon-moon"
+                                        name="moon-outline"
+                                    ></ion-icon>
+                                    <ion-icon
+                                        class="icon-sun"
+                                        name="sunny-outline"
+                                    ></ion-icon>
+                                </label>
+                            </div>
+                        </div>
                     </ul>
-
-                    <div
-                        class="container-fluid d-flex justify-content-end flex-grow-3 pe-3"
-                    >
-                        <a href="{{ site.github }}">
-                            <div class="github">
-                                <ion-icon name="logo-github"></ion-icon>
-                            </div>
-                        </a>
-                        <a href="{{ site.linkedin }}">
-                            <div class="linkedin">
-                                <ion-icon name="logo-linkedin"></ion-icon>
-                            </div>
-                        </a>
-                        <a href="{{ site.instagram }}">
-                            <div class="instagram">
-                                <ion-icon name="logo-instagram"></ion-icon>
-                            </div>
-                        </a>
-                        <a href="{{ site.shadertoy }}">
-                            <div class="shadertoy-text">Shadertoy</div>
-                        </a>
-                    </div>
                 </div>
             </div>
         </div>

@@ -1,8 +1,13 @@
+function getBgColor() {
+    return document.body.classList.contains("light-mode") ? 30 : 255;
+}
+
+let bgColor = getBgColor();
+
 let paths = [];
 let currentPath = [];
 let erasing = false;
 
-const bgColor = 30;
 const paintCursor = document.getElementById("paint-cursor");
 const eraserCursor = document.getElementById("eraser-cursor");
 const weightInput = document.getElementById("weight-draw");
@@ -74,3 +79,8 @@ clearBtn.addEventListener("click", () => {
 });
 
 paintCursor.style.display = "block";
+
+document.getElementById("themeToggle").addEventListener("change", () => {
+    bgColor = getBgColor();
+    background(bgColor);
+});
