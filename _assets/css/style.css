@@ -19,24 +19,18 @@ body {
     flex-direction: column;
 }
 
+header {
+    width: 100%;
+    height: 40px;
+    bottom: 0%;
+    position: relative;
+}
+
 .main {
     flex: 1;
     width: 100%;
-    min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 123px);
     padding: 100px 20px 40px;
-
-    background: linear-gradient(linear, #000000, #001338, #4b566b);
-    background: -webkit-gradient(
-        linear,
-        center top,
-        center bottom,
-        from(#000000),
-        color-stop(50%, #001338),
-        to(#4b566b)
-    );
-    background: -moz-linear-gradient(top, #000000, #001338, #4b566b);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
 }
 
 a:link,
@@ -63,31 +57,47 @@ a:hover {
 
 /* Apresentação */
 
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
 .profile {
     max-width: 284px;
     max-height: 284px;
     border-radius: 50%;
-    margin-top: 100px;
-    position: fixed;
-    display: inline-flex;
 }
 
 .profileh3 {
-    display: inline-flex;
-    position: fixed;
     color: #b8b8b8;
-    margin-top: 394px;
-    text-align: justify;
-    text-justify: inter-word;
+    margin-top: 20px;
+    text-align: center;
 }
 
 .profileh5 {
-    display: inline-flex;
-    position: fixed;
     color: #b8b8b8;
-    margin-top: 430px;
-    text-align: left;
-    text-justify: inter-word;
+    margin-top: 5px;
+    text-align: center;
+    font-weight: normal;
+}
+
+@media (max-width: 768px) {
+    .profile {
+        max-width: 220px;
+        max-height: 220px;
+    }
+
+    .profileh3 {
+        font-size: 1.2rem;
+        margin-top: 15px;
+    }
+
+    .profileh5 {
+        font-size: 1rem;
+        margin-top: 5px;
+    }
 }
 
 /* Estilo do menu */
@@ -146,7 +156,13 @@ a:hover {
 
 /* Estilo do Footer */
 
-.footer .social-icons a {
+footer {
+    padding: 10px 0;
+    margin-top: auto;
+    position: relative;
+}
+
+footer .social-icons a {
     color: #ffffff;
     font-size: 1.5rem;
     margin: 0 10px;
@@ -154,7 +170,7 @@ a:hover {
     text-decoration: none;
 }
 
-.footer .copyright {
+footer .copyright {
     font-size: 0.9rem;
     color: #bbbbbb;
 }
@@ -186,6 +202,44 @@ a:hover {
     color: #fff;
     border-width: 0;
     margin-left: 5px;
+}
+
+@media (max-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 8px 5px;
+        text-align: center;
+    }
+
+    footer .social-icons {
+        margin-bottom: 5px;
+    }
+
+    footer .social-icons a {
+        font-size: 1.1rem;
+        margin: 0 6px;
+    }
+
+    footer .copyright {
+        font-size: 0.75rem;
+        margin-bottom: 3px;
+    }
+
+    .shadertoy-text {
+        font-size: 1.3rem;
+        line-height: 22px;
+        margin-bottom: 5px;
+    }
+
+    .logo-github,
+    .logo-instagram,
+    .logo-linkedin {
+        max-width: 24px;
+        max-height: 24px;
+        margin-left: 3px;
+    }
 }
 
 /* Estilo dos modelos 3D */
@@ -331,7 +385,6 @@ a:hover {
 }
 
 .port-input-container {
-    padding-top: 20px;
     width: 100%;
     max-width: 400px;
     margin-right: 5px;

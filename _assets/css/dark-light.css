@@ -2,10 +2,6 @@
 
 header {
     background-color: black;
-    width: 100%;
-    height: 40px;
-    bottom: 0%;
-    position: relative;
 }
 
 ul,
@@ -21,13 +17,25 @@ h6 {
     color: #b8b8b8;
 }
 
-.footer {
+.main {
+    background: linear-gradient(linear, #000000, #001338, #4b566b);
+    background: -webkit-gradient(
+        linear,
+        center top,
+        center bottom,
+        from(#000000),
+        color-stop(50%, #001338),
+        to(#4b566b)
+    );
+    background: -moz-linear-gradient(top, #000000, #001338, #4b566b);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+footer {
     background-color: #0a0a0a;
     color: #fff;
-    padding: 10px 0;
     border-top: 1px solid #222;
-    margin-top: auto;
-    position: relative;
 }
 
 /* Dark Menu */
@@ -156,7 +164,7 @@ body.light-mode .form-check-label .icon-sun {
 
 body.light-mode .card-container .card-port,
 body.light-mode .post-card {
-    background-color: #f9f9f9;
+    background-color: z;
     border-color: #ccc;
     border-style: solid;
 }
@@ -182,21 +190,21 @@ body.light-mode #searchInput::placeholder {
 }
 
 /* Light Footer */
-body.light-mode .footer {
+body.light-mode footer {
     background-color: #f8f8f8;
     color: #3333;
     border-top: 1px solid #ccc;
 }
 
-body.light-mode .footer .social-icons a {
+body.light-mode footer .social-icons a {
     color: #333;
 }
 
-body.light-mode .footer .copyright {
+body.light-mode footer .copyright {
     color: #555;
 }
 
-body.light-mode .footer .shadertoy-text {
+body.light-mode footer .shadertoy-text {
     color: #333;
 }
 
