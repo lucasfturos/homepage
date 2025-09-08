@@ -309,6 +309,16 @@ footer .copyright {
     }
 }
 
+/* Estilo da Terra */
+
+.earth {
+    width: 90%;
+    max-width: 600px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+    position: relative;
+}
+
 /* Estilo da data e hora */
 
 #data,
