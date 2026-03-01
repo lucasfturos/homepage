@@ -266,3 +266,77 @@ body.light-mode #clear-draw:hover {
 body.light-mode #clear-draw:hover svg {
     fill: #111;
 }
+
+/* Chat – Light Mode */
+
+body.light-mode .chat-fab-btn {
+    background-color: #f8f9fa;
+    color: #212529;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .chat-window {
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+body.light-mode .chat-header {
+    background-color: #f8f9fa;
+    color: #212529;
+    border-bottom: 1px solid #ddd;
+}
+
+body.light-mode .chat-header button {
+    color: #212529;
+}
+
+body.light-mode .chat-title {
+    color: #212529;
+}
+
+body.light-mode .chat-header-bottom select {
+    background-color: #ffffff;
+    color: #212529;
+    border: 1px solid #ccc;
+}
+
+body.light-mode .chat-header-bottom select option {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+body.light-mode .model-info {
+    color: #666;
+}
+
+body.light-mode .chat-body {
+    background-color: #ffffff;
+}
+
+body.light-mode .chat-message.bot {
+    background-color: #f1f3f5;
+    color: #212529;
+}
+
+body.light-mode .chat-message.user {
+    background-color: #e9ecef;
+    color: #212529;
+}
+
+body.light-mode .chat-input {
+    border-top: 1px solid #ddd;
+    background-color: #f8f9fa;
+}
+
+body.light-mode .chat-input input {
+    background-color: #ffffff;
+    color: #212529;
+}
+
+body.light-mode .chat-input input::placeholder {
+    color: #888;
+}
+
+body.light-mode .chat-input button {
+    color: #212529;
+}

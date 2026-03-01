@@ -1,5 +1,51 @@
 <div class="chat-fab">
-    <button class="chat-fab-btn dark-button">
+    <button class="chat-fab-btn" id="chatToggle">
         <ion-icon name="chatbubbles-outline"></ion-icon>
     </button>
 </div>
+
+<div class="chat-window" id="chatWindow">
+    <div class="chat-header">
+        <div class="chat-header-top">
+            <span class="chat-title">Atla AI</span>
+
+            <div class="chat-actions">
+                <button id="chatExpand">
+                    <ion-icon name="expand-outline"></ion-icon>
+                </button>
+                <button id="chatClose">
+                    <ion-icon name="close-outline"></ion-icon>
+                </button>
+            </div>
+        </div>
+
+        <div class="chat-header-bottom">
+            <select id="agentSelect">
+                <option value="openai">OpenAI</option>
+                <option value="gemini">Gemini</option>
+            </select>
+
+            <span class="model-info">
+                Modelo: <strong id="modelLabel"></strong>
+            </span>
+        </div>
+    </div>
+
+    <div class="chat-body" id="chatBody">
+        <div class="chat-message bot">Olá. Como posso ajudar?</div>
+    </div>
+
+    <form class="chat-input" id="chatForm">
+        <input
+            type="text"
+            id="chatInput"
+            placeholder="Digite sua mensagem..."
+            autocomplete="off"
+        />
+        <button type="submit">
+            <ion-icon name="send-outline"></ion-icon>
+        </button>
+    </form>
+</div>
+
+<script src="{{'_assets/js/global/chat.js' | relative_url}}"></script>
