@@ -1,9 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
     {% include head.html %}
-    {% include header.html %}
     <body>
+        {% include header.html %}
+        
         {{ content }}
+        
+        {% include chat.html %}
         {% include footer.html %}
     </body>
 </html>
