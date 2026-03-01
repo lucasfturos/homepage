@@ -1462,4 +1462,8 @@ footer .copyright {
         font-size: 20px;
         margin-right: 6px;
     }
+
+    #chatExpand {
+        display: none;
+    }
 }
