@@ -7,32 +7,36 @@
 <div class="chat-window" id="chatWindow">
     <div class="chat-header">
         <div class="chat-header-top">
-            <span class="chat-title">Atla AI</span>
+            <span class="chat-title">Atlas AI</span>
 
             <div class="chat-actions">
-                <button id="chatExpand">
+                <button id="chatExpand" type="button">
                     <ion-icon name="expand-outline"></ion-icon>
                 </button>
-                <button id="chatClose">
+
+                <button id="chatClose" type="button">
                     <ion-icon name="close-outline"></ion-icon>
                 </button>
             </div>
         </div>
 
         <div class="chat-header-bottom">
-            <select id="agentSelect">
-                <option value="openai">OpenAI</option>
+            <select id="agentSelect" aria-label="Selecionar agente">
                 <option value="gemini">Gemini</option>
+                <option value="llama">Llama</option>
+                <option value="huggingface">Hugging Face</option>
             </select>
 
-            <span class="model-info">
-                Modelo: <strong id="modelLabel"></strong>
+            <span class="model-info" id="modelInfo">
+                Modelo: <strong id="modelLabel">Carregando...</strong>
             </span>
         </div>
     </div>
 
-    <div class="chat-body" id="chatBody">
-        <div class="chat-message bot">Olá. Como posso ajudar?</div>
+    <div class="chat-body" id="chatBody" aria-live="polite">
+        <div class="chat-message bot">
+            Olá! Sou o Atlas AI. Como posso ajudar?
+        </div>
     </div>
 
     <form class="chat-input" id="chatForm">
@@ -41,11 +45,13 @@
             id="chatInput"
             placeholder="Digite sua mensagem..."
             autocomplete="off"
+            required
         />
-        <button type="submit">
+
+        <button type="submit" id="chatSend">
             <ion-icon name="send-outline"></ion-icon>
         </button>
     </form>
 </div>
 
-<script src="{{'_assets/js/global/chat.js' | relative_url}}"></script>
+<script src="{{ '_assets/js/global/chat.js' | relative_url }}"></script>
